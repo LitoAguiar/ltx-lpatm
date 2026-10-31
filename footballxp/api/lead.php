@@ -52,6 +52,10 @@ if (($cfg['token'] ?? '') === '' || $stage === '') {
     ltx_json(200, ['ok' => true, 'crm' => false]);
 }
 
+$utm = [];
+parse_str($f['utm'], $utm);
+$utm = array_map(fn($v) => ltx_str(is_string($v) ? $v : '', 120), $utm);
+
 $dealName = $f['responsavel'] . ' — atleta ' . $f['idade'] . ' anos' . ($partnerLabel ? ' — ' . $partnerLabel : '');
 $contact = [
     'name' => $f['responsavel'],
@@ -70,7 +74,11 @@ $deal = [
         'idade' => $f['idade'],
         'cidade' => $f['cidade'],
         'atleta' => $f['atleta'],
-        'utm' => $f['utm'],
+        'utm_source' => $utm['utm_source'] ?? '',
+        'utm_medium' => $utm['utm_medium'] ?? '',
+        'utm_campaign' => $utm['utm_campaign'] ?? '',
+        'utm_content' => $utm['utm_content'] ?? '',
+        'pagina' => $f['pagina'],
     ]),
 ];
 if (!empty($cfg['user_id'])) {

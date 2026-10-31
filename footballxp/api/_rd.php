@@ -24,15 +24,18 @@ function ltx_config(): array
     if ($docroot !== '') {
         $candidates[] = dirname($docroot) . '/ltx-config/rd-crm.php';
     }
+    $ids = is_readable(__DIR__ . '/config.ids.php') ? (require __DIR__ . '/config.ids.php') : [];
+    $cfg = is_array($ids) ? $ids : [];
     foreach ($candidates as $path) {
         if (is_readable($path)) {
-            $cfg = require $path;
-            if (is_array($cfg)) {
-                return $cfg;
+            $secret = require $path;
+            if (is_array($secret)) {
+                // O arquivo secreto (fora do public_html) tem o token e pode sobrescrever qualquer ID.
+                $cfg = array_replace($cfg, array_filter($secret, fn($v) => $v !== '' && $v !== []));
             }
+            break;
         }
     }
-    $cfg = [];
     return $cfg;
 }
 
