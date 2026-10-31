@@ -551,8 +551,10 @@ footer{background:#14171e;padding-block:56px 40px}
       <span class="eyebrow">Fale com a equipe</span>
       <h2>Dê o primeiro passo. <span class="gold">A gente conversa.</span></h2>
       <p class="lead" style="font-size:18px">Deixe seu interesse e nossa equipe entra em contato para apresentar o programa, os valores, as condições e tirar todas as suas dúvidas.</p>
-      <p class="small" style="font-size:16px">Prefere conversar agora?</p>
-      <div><a class="btn btn-ghost" id="wa" href="#contato">Falar no WhatsApp</a></div>
+      <div class="stack" id="wa-box" style="gap:12px" hidden>
+        <p class="small" style="font-size:16px">Prefere conversar agora?</p>
+        <div><a class="btn btn-ghost" id="wa" href="#contato">Falar no WhatsApp</a></div>
+      </div>
     </div>
     <form class="form" id="lead" novalidate>
       <h3>Quero falar com a equipe</h3>
@@ -568,7 +570,7 @@ footer{background:#14171e;padding-block:56px 40px}
         <div class="field full indicado" id="f-indicado" hidden><span>Indicação</span><b id="f-indicado-nome"></b></div>
       </div>
       <div class="hp" aria-hidden="true"><label for="f-site">Site</label><input id="f-site" name="website" tabindex="-1" autocomplete="off"></div>
-      <label class="consent" for="f-ok"><input id="f-ok" name="consentimento" type="checkbox" required><span>Autorizo o contato da equipe Football Experience por WhatsApp e e-mail. <a href="#contato">Política de privacidade</a>.</span></label>
+      <label class="consent" for="f-ok"><input id="f-ok" name="consentimento" type="checkbox" required><span>Autorizo o contato da equipe Football Experience por WhatsApp e e-mail. <a href="../privacidade/" target="_blank" rel="noopener">Política de privacidade</a>.</span></label>
       <button class="btn btn-gold" type="submit" id="f-send">Quero falar com a equipe</button>
       <p class="status" id="status" role="status" hidden></p>
     </form>
@@ -587,7 +589,7 @@ footer{background:#14171e;padding-block:56px 40px}
         <li><a href="#contato">Contato</a></li>
         <li><a href="parceiros/">Seja parceiro</a></li>
         <li><a href="#contato">Instagram</a></li>
-        <li><a href="#contato">Política de Privacidade</a></li>
+        <li><a href="../privacidade/">Política de Privacidade</a></li>
         <li><a href="#contato">Termos e Condições</a></li>
       </ul>
     </div>
@@ -609,6 +611,7 @@ const API_PARCEIROS = "api/parceiros.php";
   if (WHATSAPP_NUMBER) {
     wa.href = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent("Olá! Quero saber mais sobre o Football Experience Madrid 2027.");
     wa.target = "_blank"; wa.rel = "noopener";
+    document.getElementById('wa-box').hidden = false;
   }
 
   // FAQ: abre um item por vez

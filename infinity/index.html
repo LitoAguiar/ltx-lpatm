@@ -195,6 +195,8 @@ p{margin:0}
 .field input::placeholder{color:#6f6a8e}
 [aria-invalid="true"]{border-color:#ff5c7a!important}
 .consent{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--muted)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.consent a{color:inherit;text-decoration:underline}
 .consent input{width:20px;height:20px;margin-top:3px;flex:none;accent-color:var(--violet)}
 .form .btn{width:100%}
 .status{font-size:15px;padding:12px 14px;border:1px solid var(--line);background:#0a0818}
@@ -445,7 +447,8 @@ footer{border-top:1px solid var(--line);padding-block:44px}
           </select></div>
         <div class="field"><label for="i-empresa">Empresa <em>(opcional)</em></label><input id="i-empresa" name="empresa" autocomplete="organization"></div>
       </div>
-      <label class="consent" for="i-ok"><input id="i-ok" name="consentimento" type="checkbox" required><span>Autorizo o contato do Infinity Games Con por WhatsApp e e-mail.</span></label>
+      <div class="hp" aria-hidden="true"><label for="i-site">Site</label><input id="i-site" name="website" tabindex="-1" autocomplete="off"></div>
+      <label class="consent" for="i-ok"><input id="i-ok" name="consentimento" type="checkbox" required><span>Autorizo o contato do Infinity Games Con por WhatsApp e e-mail. <a href="../privacidade/" target="_blank" rel="noopener">Política de privacidade</a>.</span></label>
       <button class="btn btn-grad" type="submit">Quero fazer parte</button>
       <p class="status" id="status" role="status" hidden></p>
     </form>
@@ -455,14 +458,14 @@ footer{border-top:1px solid var(--line);padding-block:44px}
 <footer>
   <div class="wrap foot">
     <img class="igc" src="img/igc-logo.png" alt="Infinity Games Con">
-    <nav aria-label="Rodapé"><a href="#evento">O evento</a><a href="#parceiros">Parceiros</a><a href="#contato">Contato</a><a href="../">LTX Global</a></nav>
+    <nav aria-label="Rodapé"><a href="#evento">O evento</a><a href="#parceiros">Parceiros</a><a href="#contato">Contato</a><a href="../privacidade/">Privacidade</a><a href="../">LTX Global</a></nav>
     <div class="by">Um evento <img src="img/ltx-global.png" alt="LTX Global"></div>
   </div>
 </footer>
 
 <script>
 /* Configure antes de divulgar: */
-const LEAD_ENDPOINT = ""; // URL do CRM/webhook que recebe o formulário (POST JSON)
+const LEAD_ENDPOINT = "api/lead.php"; // grava no funil "Infinity Games Con" do RD CRM
 
 (function(){
   const form = document.getElementById('lead');
@@ -480,16 +483,22 @@ const LEAD_ENDPOINT = ""; // URL do CRM/webhook que recebe o formulário (POST J
     status.hidden = false;
     if (!ok) { status.textContent = "Preencha todos os campos obrigatórios, com WhatsApp e DDD, e marque a autorização de contato."; return; }
     const data = Object.fromEntries(new FormData(form).entries());
-    data.origem = "LP Infinity Games Con 2027"; data.data_envio = new Date().toISOString();
+    data.consentimento = true;
+    data.pagina = location.pathname;
+    const q = new URLSearchParams(location.search);
+    data.utm = ['utm_source','utm_medium','utm_campaign','utm_content'].filter(k => q.get(k)).map(k => k + '=' + q.get(k)).join('&');
+    const btn = form.querySelector('button[type=submit]');
     if (!LEAD_ENDPOINT) { status.textContent = "Formulário em configuração: os dados ainda não estão sendo enviados."; return; }
+    btn.disabled = true; status.textContent = "Enviando…";
     try {
       const r = await fetch(LEAD_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
-      if (!r.ok) throw new Error();
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok || !j.ok) throw new Error();
       form.reset();
       status.textContent = "Recebemos seu contato. Você será avisado das novidades do Infinity Games Con.";
     } catch (_) {
       status.textContent = "Não foi possível enviar agora. Verifique sua conexão e tente de novo.";
-    }
+    } finally { btn.disabled = false; }
   });
 })();
 </script>

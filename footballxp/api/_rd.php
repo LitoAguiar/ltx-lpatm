@@ -196,6 +196,21 @@ function rd_deal_id(?array $data): string
     return (string) ($data['_id'] ?? $data['id'] ?? ($data['deal']['_id'] ?? ''));
 }
 
+// Valor de um campo personalizado numa negociação lida pela API (aceita os dois formatos do RD).
+function rd_field_value(array $deal, string $fieldId): string
+{
+    if ($fieldId === '') {
+        return '';
+    }
+    foreach ($deal['deal_custom_fields'] ?? [] as $f) {
+        $id = $f['custom_field_id'] ?? ($f['custom_field']['_id'] ?? ($f['custom_field']['id'] ?? ''));
+        if ($id === $fieldId) {
+            return trim((string) ($f['value'] ?? ''));
+        }
+    }
+    return '';
+}
+
 // Lista de parceiros aprovados = negociações na etapa "Aprovado" do funil de parceiros.
 // Nome da negociação no formato "Instituição — Cidade/UF". Cache de 10 minutos.
 function ltx_partners(bool $fresh = false): array
@@ -212,6 +227,7 @@ function ltx_partners(bool $fresh = false): array
     if ($stage === '') {
         return [];
     }
+    $codeField = $cfg['partner_fields']['codigo'] ?? '';
     $list = [];
     $next = null;
     for ($i = 0; $i < 10; $i++) {
@@ -235,7 +251,13 @@ function ltx_partners(bool $fresh = false): array
             $parts = preg_split('/\s+[—–-]\s+/u', $full, 2);
             $name = trim($parts[0]);
             $city = isset($parts[1]) ? trim($parts[1]) : '';
-            $list[] = ['code' => ltx_slug($name), 'name' => $name, 'city' => $city];
+            // O código vem do campo "FX - Código do parceiro" (o mesmo do link enviado ao parceiro).
+            // Assim o link continua valendo mesmo se a equipe renomear a negociação.
+            $code = ltx_slug(rd_field_value($d, $codeField));
+            if ($code === '') {
+                $code = ltx_slug($name);
+            }
+            $list[] = ['code' => $code, 'name' => $name, 'city' => $city];
         }
         $next = $r['data']['next_page'] ?? null;
         if (empty($r['data']['has_more']) || !$next) {

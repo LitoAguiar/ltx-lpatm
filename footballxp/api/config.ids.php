@@ -28,4 +28,20 @@ return [
         'instagram' => '6ae5fa8fcdb77b00252efc2a', // FX - Instagram
         'codigo'    => '6ae5fa9656256500285f9d16', // FX - Código do parceiro
     ],
+
+    // Funil "Infinity Games Con" (6ae638f430023500245557c9)
+    'igc' => [
+        'stage_visitantes_id' => '6ae638f430023500245557cb', // Visitantes (lista)
+        'stage_comercial_id'  => '6ae638f430023500245557cc', // Novo contato comercial
+        // Apresentação ...cd · Proposta enviada ...ce · Contrato e pagamento ...cf
+        'fields' => [
+            'perfil'       => '6ae639c6521a9c002453727c', // IGC - Perfil
+            'cidade'       => '6ae639c6eb59c800201254b8', // IGC - Cidade/país
+            'utm_source'   => '6acf764ba4a1dc0024d9cd70',
+            'utm_medium'   => '6acf764cd17ed000248e84ef',
+            'utm_campaign' => '6acf764dfd8d280024a6fd3e',
+            'utm_content'  => '6acf764ee2912a0023092548',
+            'pagina'       => '6acf7647cc21be0020f726c4',
+        ],
+    ],
 ];

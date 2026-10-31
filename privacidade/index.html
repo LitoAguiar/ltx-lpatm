@@ -1,0 +1,249 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Política de Privacidade LTX</title>
+<meta name="description" content="Política de Privacidade da LTX Global: como tratamos os dados enviados nos formulários do Football Experience, do programa de parceiros e do Infinity Games Con.">
+<meta name="robots" content="index,follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,900&display=swap">
+<style>
+/* Layout: documento jurídico legível — coluna única de leitura com índice lateral no desktop, identidade LTX (preto, verde) só no topo e nos detalhes. Visual único escuro, igual ao site da LTX. */
+:root{
+  --black:#000;
+  --panel:#0d100c;
+  --line:rgba(255,255,255,.12);
+  --ink:#f4f6f1;
+  --text:#d3d8cd;
+  --muted:#9aa194;
+  --green:#7ccd3c;
+  --lime:#c6f04f;
+  --todo-bg:#3a3205;
+  --todo-ink:#ffe27a;
+  --font:"Montserrat","Helvetica Neue",Arial,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--black);color:var(--text);font-family:var(--font);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+[hidden]{display:none!important}
+a{color:var(--lime)}
+a:focus-visible{outline:3px solid var(--lime);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(28px,env(safe-area-inset-left,0px));padding-right:max(28px,env(safe-area-inset-right,0px))}
+@media (max-width:480px){.wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}}
+
+.top{border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:22px}
+.top img{height:34px;width:auto;display:block}
+.top nav{display:flex;gap:22px;flex-wrap:wrap}
+.top nav a{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:#d6dbd0}
+.top nav a:hover{color:var(--lime)}
+@media (max-width:560px){.top nav{display:none}}
+
+.head .wrap{padding-block:56px 36px}
+.label{font-size:12px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--green);margin:0 0 14px}
+h1{margin:0;color:var(--ink);font-weight:900;font-style:italic;text-transform:uppercase;font-size:clamp(32px,5vw,56px);line-height:1.02;letter-spacing:-.01em;text-wrap:balance}
+.meta{margin:18px 0 0;color:var(--muted);font-size:14px}
+.summary{margin-top:28px;max-width:72ch;background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--green);border-radius:10px;padding:18px 20px;color:var(--ink)}
+.summary p{margin:0}
+
+.layout{display:grid;grid-template-columns:240px minmax(0,1fr);gap:56px;padding-block:20px 80px}
+@media (max-width:900px){.layout{grid-template-columns:1fr;gap:28px}}
+.toc{position:sticky;top:24px;align-self:start;font-size:14px}
+.toc p{margin:0 0 10px;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.toc ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.toc a{color:var(--text);text-decoration:none}
+.toc a:hover{color:var(--lime)}
+@media (max-width:900px){.toc{position:static;border:1px solid var(--line);border-radius:10px;padding:16px 18px}}
+
+article{max-width:72ch;min-width:0}
+article section{padding-top:8px;margin-bottom:36px;scroll-margin-top:20px}
+h2{margin:0 0 12px;color:var(--ink);font-size:clamp(19px,2.2vw,23px);font-weight:700;line-height:1.3;text-wrap:balance}
+h2 .n{color:var(--green);margin-right:8px}
+h3{margin:22px 0 8px;color:var(--ink);font-size:16px;font-weight:700}
+article p{margin:0 0 14px}
+article ul{margin:0 0 14px;padding-left:22px}
+article li{margin-bottom:6px}
+strong{color:var(--ink);font-weight:600}
+.table{overflow-x:auto;margin:6px 0 18px;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+th,td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--line)}
+th{color:var(--ink);font-weight:600;background:var(--panel)}
+tr:last-child td{border-bottom:0}
+.todo{background:var(--todo-bg);color:var(--todo-ink);padding:1px 6px;border-radius:4px;font-weight:600;white-space:nowrap}
+.contact{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.contact p{margin:0 0 6px}
+
+footer{border-top:1px solid var(--line)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;padding-block:28px;font-size:13px;color:var(--muted)}
+footer img{height:26px;width:auto}
+</style>
+</head><body>
+
+<header class="top">
+  <div class="wrap">
+    <a href="../" aria-label="Página inicial da LTX Global"><img src="../assets/ltx-global.png" alt="LTX Global"></a>
+    <nav aria-label="Produtos"><a href="../footballxp/">Football Experience</a><a href="../infinity/">Infinity Games Con</a></nav>
+  </div>
+</header>
+
+<div class="head">
+  <div class="wrap">
+    <p class="label">LGPD · Lei 13.709/2018</p>
+    <h1>Política de Privacidade</h1>
+    <p class="meta">Última atualização: 31 de outubro de 2026</p>
+    <div class="summary">
+      <p><strong>Em resumo:</strong> usamos os dados que você envia nos nossos formulários para falar com você sobre o produto que despertou seu interesse. Não vendemos dados. Você pode pedir acesso, correção ou exclusão a qualquer momento pelo e-mail do encarregado no fim desta página.</p>
+    </div>
+  </div>
+</div>
+
+<div class="wrap layout">
+  <nav class="toc" aria-label="Índice">
+    <p>Nesta página</p>
+    <ol>
+      <li><a href="#quem">Quem somos</a></li>
+      <li><a href="#dados">Dados que coletamos</a></li>
+      <li><a href="#finalidades">Para que usamos</a></li>
+      <li><a href="#menores">Dados de menores</a></li>
+      <li><a href="#compartilhamento">Com quem compartilhamos</a></li>
+      <li><a href="#internacional">Transferência internacional</a></li>
+      <li><a href="#navegador">Armazenamento no navegador</a></li>
+      <li><a href="#retencao">Por quanto tempo guardamos</a></li>
+      <li><a href="#seguranca">Segurança</a></li>
+      <li><a href="#direitos">Seus direitos</a></li>
+      <li><a href="#contato">Encarregado e contato</a></li>
+      <li><a href="#mudancas">Mudanças nesta política</a></li>
+    </ol>
+  </nav>
+
+  <article>
+    <section id="quem">
+      <h2><span class="n">1.</span>Quem somos</h2>
+      <p>Esta política vale para o site <strong>ltxglobal.com.br</strong> e suas páginas: LTX Global, Football Experience (programa de experiências de futebol internacional, incluindo a página de parceiros) e Infinity Games Con.</p>
+      <p>A controladora dos dados é <span class="todo">[RAZÃO SOCIAL DA LTX GLOBAL]</span>, inscrita no CNPJ <span class="todo">[CNPJ]</span>, com sede em <span class="todo">[ENDEREÇO COMPLETO]</span>, aqui chamada de "LTX Global". Football Experience e Infinity Games Con são marcas da LTX Global.</p>
+    </section>
+
+    <section id="dados">
+      <h2><span class="n">2.</span>Dados que coletamos</h2>
+      <p>Coletamos apenas o que você digita nos formulários e alguns dados técnicos de origem da visita.</p>
+      <div class="table">
+        <table>
+          <thead><tr><th scope="col">Formulário</th><th scope="col">Dados</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Football Experience</strong> (interesse em inscrição)</td><td>Nome do responsável, WhatsApp, e-mail (opcional), cidade, idade e nome do atleta (opcional), escola ou escolinha que indicou (opcional) e o consentimento de contato.</td></tr>
+            <tr><td><strong>Programa de parceiros</strong></td><td>Tipo e nome da instituição, CNPJ, cidade, nome e cargo do responsável, WhatsApp, e-mail, número aproximado de alunos, faixas de idade atendidas, Instagram e o consentimento de contato.</td></tr>
+            <tr><td><strong>Infinity Games Con</strong></td><td>Nome, WhatsApp, e-mail, cidade/estado ou país, perfil de interesse (visitante, expositor, patrocinador, creator, desenvolvedor ou startup, caravana, imprensa), empresa (opcional) e o consentimento de contato.</td></tr>
+            <tr><td><strong>Dados técnicos</strong> (todos)</td><td>Página de envio, parâmetros de campanha (UTM: origem, mídia, campanha e conteúdo), código do parceiro que indicou a visita, endereço IP (usado só para limitar envios automatizados) e data e hora do envio.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Não pedimos dados sensíveis (saúde, religião, origem racial, biometria) nos formulários. Documentos como passaporte, autorização de viagem e dados de saúde do atleta só são pedidos depois, se a família contratar o programa, e seguem o contrato de prestação de serviços.</p>
+    </section>
+
+    <section id="finalidades">
+      <h2><span class="n">3.</span>Para que usamos e com qual base legal</h2>
+      <div class="table">
+        <table>
+          <thead><tr><th scope="col">Finalidade</th><th scope="col">Base legal (LGPD)</th></tr></thead>
+          <tbody>
+            <tr><td>Entrar em contato por WhatsApp e e-mail para apresentar o programa ou o evento, tirar dúvidas e enviar proposta.</td><td>Consentimento (art. 7º, I) e procedimentos preliminares a contrato a pedido do titular (art. 7º, V).</td></tr>
+            <tr><td>Avaliar o cadastro de parceiros, enviar o termo de adesão e gerar o link de indicação.</td><td>Procedimentos preliminares a contrato (art. 7º, V).</td></tr>
+            <tr><td>Registrar qual parceiro indicou cada inscrição e calcular a comissão.</td><td>Execução de contrato com o parceiro (art. 7º, V) e legítimo interesse (art. 7º, IX).</td></tr>
+            <tr><td>Medir quais campanhas e canais trazem contatos (UTM).</td><td>Legítimo interesse (art. 7º, IX), com dados mínimos.</td></tr>
+            <tr><td>Enviar novidades do Infinity Games Con (abertura de ingressos, programação, oportunidades).</td><td>Consentimento (art. 7º, I), que pode ser retirado a qualquer momento.</td></tr>
+            <tr><td>Prevenir abuso e envios automatizados nos formulários.</td><td>Legítimo interesse (art. 7º, IX).</td></tr>
+            <tr><td>Cumprir obrigações legais, fiscais e regulatórias e exercer direitos em processos.</td><td>Obrigação legal (art. 7º, II) e exercício regular de direitos (art. 7º, VI).</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Não usamos seus dados para decisões automatizadas que afetem seus interesses e não vendemos nem alugamos dados.</p>
+    </section>
+
+    <section id="menores">
+      <h2><span class="n">4.</span>Dados de crianças e adolescentes</h2>
+      <p>O Football Experience é voltado a atletas menores de idade. Por isso, o formulário é preenchido pelo <strong>responsável legal</strong>, que informa apenas a idade e, se quiser, o nome do atleta. Todo o contato é feito com o responsável, nunca diretamente com o atleta.</p>
+      <p>Tratamos esses dados no melhor interesse da criança ou do adolescente, como determina o art. 14 da LGPD, com o consentimento de quem preencheu o formulário e somente para apresentar o programa. Se percebermos que um formulário foi enviado por um menor sem o responsável, excluímos os dados.</p>
+    </section>
+
+    <section id="compartilhamento">
+      <h2><span class="n">5.</span>Com quem compartilhamos</h2>
+      <p>Compartilhamos dados apenas quando necessário para as finalidades acima:</p>
+      <ul>
+        <li><strong>RD Station CRM</strong>, sistema onde registramos e acompanhamos os contatos.</li>
+        <li><strong>Hostinger</strong>, provedor que hospeda o site e uma cópia de segurança dos envios.</li>
+        <li><strong>Next Sport Travel e Atlético de Madrid</strong>, somente depois da contratação do programa, com os dados necessários para organizar a viagem, os treinos e a hospedagem.</li>
+        <li><strong>Escola ou escolinha parceira</strong> que indicou a inscrição, somente o necessário para confirmar a indicação e a comissão (por exemplo, nome do responsável e status da inscrição). Parceiros não recebem a lista completa de contatos.</li>
+        <li><strong>Autoridades públicas</strong>, quando houver obrigação legal ou ordem judicial.</li>
+      </ul>
+      <p>Esses fornecedores tratam os dados conforme nossas instruções e devem manter medidas de segurança adequadas.</p>
+    </section>
+
+    <section id="internacional">
+      <h2><span class="n">6.</span>Transferência internacional</h2>
+      <p>Alguns fornecedores podem armazenar dados em servidores fora do Brasil. Para quem contrata o Football Experience, os dados necessários à viagem são enviados à Espanha. Essas transferências seguem o art. 33 da LGPD, incluindo a hipótese de execução de contrato a pedido do titular.</p>
+    </section>
+
+    <section id="navegador">
+      <h2><span class="n">7.</span>Armazenamento no navegador</h2>
+      <p>O site não usa cookies de publicidade. A página do Football Experience guarda no seu navegador (localStorage), por até 90 dias:</p>
+      <ul>
+        <li><code>fx_parceiro</code>: o código do parceiro que indicou sua visita, para que a indicação seja registrada mesmo que você volte depois.</li>
+        <li><code>fx_utm</code>: os parâmetros da campanha que trouxe você ao site.</li>
+      </ul>
+      <p>Você pode apagar esses dados limpando os dados de navegação do site. Se adotarmos ferramentas de análise ou de anúncios, atualizaremos esta política e pediremos seu consentimento quando a lei exigir.</p>
+    </section>
+
+    <section id="retencao">
+      <h2><span class="n">8.</span>Por quanto tempo guardamos</h2>
+      <ul>
+        <li><strong>Contatos que não contrataram:</strong> até 24 meses após o último contato, ou antes, se você pedir a exclusão ou retirar o consentimento.</li>
+        <li><strong>Clientes:</strong> pelo prazo do contrato e depois pelos prazos legais (por exemplo, 5 anos para registros fiscais e de consumo).</li>
+        <li><strong>Parceiros:</strong> durante a parceria e por 5 anos após o último pagamento de comissão.</li>
+      </ul>
+      <p>Depois desses prazos, os dados são excluídos ou anonimizados, salvo obrigação legal de guarda.</p>
+    </section>
+
+    <section id="seguranca">
+      <h2><span class="n">9.</span>Segurança</h2>
+      <p>O site usa conexão criptografada (HTTPS). As credenciais de integração ficam fora da área pública do servidor, o acesso ao CRM é restrito à equipe que atende os contatos e os formulários têm proteção contra envios automatizados. Nenhum sistema é totalmente imune a incidentes; se houver um incidente com risco relevante, comunicaremos os titulares afetados e a ANPD, como prevê a lei.</p>
+    </section>
+
+    <section id="direitos">
+      <h2><span class="n">10.</span>Seus direitos</h2>
+      <p>Pelo art. 18 da LGPD, você pode, a qualquer momento e sem custo:</p>
+      <ul>
+        <li>confirmar se tratamos seus dados e acessá-los;</li>
+        <li>corrigir dados incompletos, inexatos ou desatualizados;</li>
+        <li>pedir anonimização, bloqueio ou exclusão de dados desnecessários ou tratados em desconformidade;</li>
+        <li>pedir a portabilidade dos dados;</li>
+        <li>pedir a exclusão dos dados tratados com base no consentimento;</li>
+        <li>saber com quem compartilhamos seus dados;</li>
+        <li>retirar o consentimento, inclusive para mensagens, sem prejuízo do que foi feito antes;</li>
+        <li>apresentar reclamação à Autoridade Nacional de Proteção de Dados (ANPD).</li>
+      </ul>
+      <p>Para parar de receber mensagens, basta responder "sair" no WhatsApp ou usar o link de descadastro do e-mail. Respondemos aos pedidos em até 15 dias.</p>
+    </section>
+
+    <section id="contato">
+      <h2><span class="n">11.</span>Encarregado e contato</h2>
+      <div class="contact">
+        <p><strong>Encarregado pelo tratamento de dados (DPO):</strong> <span class="todo">[NOME DO ENCARREGADO]</span></p>
+        <p><strong>E-mail:</strong> <span class="todo">[privacidade@ltxglobal.com.br]</span></p>
+        <p><strong>Endereço:</strong> <span class="todo">[ENDEREÇO COMPLETO]</span></p>
+      </div>
+    </section>
+
+    <section id="mudancas">
+      <h2><span class="n">12.</span>Mudanças nesta política</h2>
+      <p>Podemos atualizar esta política quando lançarmos novos produtos, formulários ou ferramentas. A data da última atualização fica no topo da página. Mudanças relevantes serão comunicadas a quem estiver em nossa base de contatos.</p>
+    </section>
+  </article>
+</div>
+
+<footer>
+  <div class="wrap">
+    <a href="../" aria-label="Página inicial da LTX Global"><img src="../assets/ltx-global.png" alt="LTX Global"></a>
+    <span>© 2026 LTX Global. Todos os direitos reservados.</span>
+  </div>
+</footer>
+</body></html>

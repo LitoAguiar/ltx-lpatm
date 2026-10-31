@@ -34,14 +34,23 @@ if ($errors) {
 // Confere o parceiro na lista de aprovados.
 $partner = null;
 if ($f['parceiro'] !== '') {
-    foreach (ltx_partners() as $p) {
-        if ($p['code'] === $f['parceiro']) { $partner = $p; break; }
+    // Primeiro no cache; se não achar, consulta o RD na hora (parceiro aprovado há menos de 10 minutos).
+    foreach ([false, true] as $fresh) {
+        foreach (ltx_partners($fresh) as $p) {
+            if ($p['code'] === $f['parceiro']) { $partner = $p; break 2; }
+        }
     }
 }
 $partnerLabel = $partner ? $partner['name'] : '';
-$partnerStatus = $partner
-    ? ($f['parceiro_origem'] === 'link' ? 'Link do parceiro' : 'Declarado pelo inscrito (validar)')
-    : ($f['parceiro_texto'] !== '' ? 'Não cadastrado: ' . $f['parceiro_texto'] : 'Sem parceiro');
+if ($partner) {
+    $partnerStatus = $f['parceiro_origem'] === 'link' ? 'Link do parceiro' : 'Declarado pelo inscrito (validar)';
+} elseif ($f['parceiro_origem'] === 'link' && $f['parceiro'] !== '') {
+    // Link de parceiro ainda não aprovado (ou código errado): não perde a indicação, marca para validar.
+    $partnerLabel = $f['parceiro'];
+    $partnerStatus = 'Link sem parceiro aprovado (validar)';
+} else {
+    $partnerStatus = $f['parceiro_texto'] !== '' ? 'Não cadastrado: ' . $f['parceiro_texto'] : 'Sem parceiro';
+}
 
 ltx_backup('leads', $f + ['parceiro_nome' => $partnerLabel, 'parceiro_status' => $partnerStatus]);
 

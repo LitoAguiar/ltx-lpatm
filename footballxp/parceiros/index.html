@@ -130,6 +130,7 @@ p{margin:0}
 [aria-invalid="true"]{border-color:#c0392b!important;background:#fdf0ee!important}
 .consent{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:#3b4560}
 .consent input{width:20px;height:20px;margin-top:2px;flex:none;accent-color:var(--gold-deep)}
+.consent a{color:var(--gold-deep)}
 .form .btn{min-height:54px;width:100%}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 .status{font-size:14.5px;border-radius:8px;padding:12px 14px;background:#f4efe0;color:#5a4a1a}
@@ -155,6 +156,7 @@ footer{background:#14171e;padding-block:44px}
 .foot img.fx{height:70px;width:auto}
 .by{display:flex;align-items:center;gap:12px;font-size:14px;color:#9aa0ad}
 .by img{height:26px;width:auto}
+.priv{color:#9aa0ad;font-size:14px}
 </style>
 </head><body>
 
@@ -289,7 +291,7 @@ footer{background:#14171e;padding-block:44px}
         <div class="field full"><label for="p-insta">Instagram da instituição <em>(opcional)</em></label><input id="p-insta" name="instagram" placeholder="@suainstituicao"></div>
       </div>
       <div class="hp" aria-hidden="true"><label for="p-site">Site</label><input id="p-site" name="website" tabindex="-1" autocomplete="off"></div>
-      <label class="consent" for="p-ok"><input id="p-ok" name="consentimento" type="checkbox" required><span>Autorizo o contato da equipe LTX Global por WhatsApp e e-mail sobre o programa de parceiros.</span></label>
+      <label class="consent" for="p-ok"><input id="p-ok" name="consentimento" type="checkbox" required><span>Autorizo o contato da equipe LTX Global por WhatsApp e e-mail sobre o programa de parceiros. <a href="../../privacidade/" target="_blank" rel="noopener">Política de privacidade</a>.</span></label>
       <button class="btn btn-gold" type="submit" id="p-send">Enviar cadastro</button>
       <p class="status" id="p-status" role="status" hidden></p>
     </form>
@@ -316,6 +318,7 @@ footer{background:#14171e;padding-block:44px}
 <footer>
   <div class="wrap foot">
     <a href="../"><img class="fx" src="../img/fx-escudo.png" alt="Football Experience"></a>
+    <a class="priv" href="../../privacidade/">Política de Privacidade</a>
     <div class="by">Football Experience é um programa <a href="../../" aria-label="Ir para a página da LTX Global"><img src="../img/ltx-global.png" alt="LTX Global"></a></div>
   </div>
 </footer>
