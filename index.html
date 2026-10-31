@@ -1,0 +1,182 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LTX Global</title>
+<meta name="description" content="LTX Global: experiências internacionais em esporte e entretenimento. Football Experience Madrid 2027 com o Atlético de Madrid e Infinity Games Con.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,800;1,900&display=swap">
+<style>
+/* Layout: vitrine da marca — fundo preto da identidade LTX, feixe verde vertical atrás do logo, e as duas marcas lado a lado como portas de entrada. */
+:root{
+  --black:#000000;
+  --panel:#0b0d0a;
+  --line:rgba(255,255,255,.12);
+  --ink:#ffffff;
+  --muted:#a3a99c;
+  --green:#7ccd3c;
+  --lime:#c6f04f;
+  --fx-gold:#d1b154;
+  --igc-violet:#b04cf0;
+  --igc-cyan:#3fd0f5;
+  --font:"Montserrat","Helvetica Neue",Arial,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--black);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--lime);outline-offset:4px;border-radius:6px}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(28px,env(safe-area-inset-left,0px));padding-right:max(28px,env(safe-area-inset-right,0px))}
+@media (max-width:480px){.wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}}
+.label{font-size:12px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--muted)}
+
+/* topo */
+.top{position:relative;z-index:2}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:26px}
+.top img{height:40px;width:auto}
+.top nav{display:flex;gap:28px}
+.top nav a{font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;color:#d6dbd0}
+.top nav a:hover{color:var(--lime)}
+@media (max-width:560px){.top nav{display:none}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.beam{position:absolute;inset:-10% 18% 0;pointer-events:none;
+  background:repeating-linear-gradient(90deg,rgba(124,205,60,0) 0 14px,rgba(124,205,60,.22) 15px 17px,rgba(124,205,60,0) 18px 38px);
+  mask-image:radial-gradient(50% 60% at 50% 40%,#000 0%,transparent 75%);-webkit-mask-image:radial-gradient(50% 60% at 50% 40%,#000 0%,transparent 75%)}
+.glow{position:absolute;left:-10%;bottom:-30%;width:55%;height:70%;background:radial-gradient(closest-side,rgba(124,205,60,.45),transparent);pointer-events:none}
+.grid-lines{position:absolute;inset:0;pointer-events:none;background:
+  linear-gradient(var(--line),var(--line)) 0 120px/100% 1px no-repeat,
+  linear-gradient(90deg,var(--line),var(--line)) 8% 0/1px 100% no-repeat,
+  linear-gradient(90deg,var(--line),var(--line)) 92% 0/1px 100% no-repeat;opacity:.6}
+.hero .wrap{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:28px;padding-block:72px 96px}
+.hero .logo{width:min(560px,86%);height:auto}
+.hero h1{margin:0;font-weight:900;font-style:italic;font-size:clamp(30px,4.6vw,54px);line-height:1.05;letter-spacing:-.01em;text-transform:uppercase;text-wrap:balance;max-width:20ch}
+.hero h1 span{background:linear-gradient(90deg,var(--green),var(--lime));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{margin:0;max-width:56ch;color:#c9cec2;font-size:clamp(16px,1.8vw,19px);font-weight:300}
+
+/* marcas */
+.brands .wrap{padding-block:88px}
+.brands-head{display:flex;flex-direction:column;gap:12px;margin-bottom:40px}
+.brands-head h2{margin:0;font-weight:800;font-style:italic;font-size:clamp(26px,3.4vw,38px);text-transform:uppercase;letter-spacing:-.005em}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media (max-width:860px){.cards{grid-template-columns:1fr}}
+.card{position:relative;display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden;text-decoration:none;transition:transform .2s ease,border-color .2s ease}
+a.card:hover{transform:translateY(-3px)}
+.card.fx:hover{border-color:var(--fx-gold)}
+.card .media{position:relative;aspect-ratio:16/9;overflow:hidden;background:#0d1530}
+.card .media img{width:100%;height:100%;object-fit:cover}
+.card.fx .media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,15,30,0) 35%,rgba(10,15,30,.85))}
+.card.fx .media .mark{position:absolute;left:24px;bottom:20px;z-index:1;height:52px;width:auto}
+.card .body{display:flex;flex-direction:column;gap:14px;padding:28px 28px 30px;flex:1}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.26em;text-transform:uppercase}
+.fx .kicker{color:var(--fx-gold)}
+.igc .kicker{background:linear-gradient(90deg,var(--igc-violet),var(--igc-cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.card h3{margin:0;font-weight:800;font-size:clamp(22px,2.4vw,28px);line-height:1.2}
+.card p{margin:0;color:#b9beb3;font-size:16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:2px}
+.meta span{border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:13px;font-weight:600;color:#e3e6df}
+.go{margin-top:auto;padding-top:10px;display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.fx .go{color:var(--fx-gold)}
+.go svg{width:20px;height:20px;transition:transform .2s}
+a.card:hover .go svg{transform:translateX(4px)}
+.soon{color:var(--muted)}
+
+/* sobre */
+.about{border-top:1px solid var(--line)}
+.about .wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:56px;padding-block:80px;align-items:start}
+.about h2{margin:0;font-weight:800;font-style:italic;font-size:clamp(26px,3.4vw,38px);text-transform:uppercase;line-height:1.1}
+.about h2 span{color:var(--green)}
+.about .txt{display:flex;flex-direction:column;gap:18px;color:#c9cec2;font-size:18px;font-weight:300;max-width:60ch}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:12px}
+.pillars div{background:var(--black);padding:20px 18px;display:flex;flex-direction:column;gap:6px}
+.pillars b{font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--lime)}
+.pillars span{font-size:14px;color:var(--muted);line-height:1.45}
+@media (max-width:860px){.about .wrap{grid-template-columns:1fr;gap:28px}}
+@media (max-width:560px){.pillars{grid-template-columns:1fr}}
+
+footer{border-top:1px solid var(--line)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;padding-block:30px}
+footer img{height:28px;width:auto}
+footer p{margin:0;font-size:13px;color:var(--muted)}
+</style>
+</head><body>
+
+<header class="top">
+  <div class="wrap">
+    <a href="#inicio" aria-label="LTX Global, início"><img src="assets/ltx-global.png" alt="LTX Global"></a>
+    <nav aria-label="Principal">
+      <a href="#marcas">Marcas</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="beam" aria-hidden="true"></div>
+  <div class="glow" aria-hidden="true"></div>
+  <div class="grid-lines" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="label">Esporte · Games · Experiências internacionais</span>
+    <img class="logo" src="assets/ltx-global.png" alt="">
+    <h1>Experiências que levam <span>paixões ao mundo.</span></h1>
+    <p>A LTX Global cria e opera experiências internacionais em esporte e entretenimento: do campo de treino em Madrid à maior arena gamer do Sul da América do Sul.</p>
+  </div>
+</section>
+
+<section class="brands" id="marcas">
+  <div class="wrap">
+    <div class="brands-head">
+      <span class="label">Nossas marcas</span>
+      <h2>Escolha sua experiência</h2>
+    </div>
+    <div class="cards">
+      <a class="card fx" href="footballxp/">
+        <div class="media">
+          <img src="assets/fx-card.jpg" alt="Jovens atletas com o uniforme do Atlético de Madrid no estádio">
+          <img class="mark" src="assets/fx-logo.png" alt="Football Experience">
+        </div>
+        <div class="body">
+          <span class="kicker">Intercâmbio esportivo</span>
+          <h3>Football Experience Madrid 2027</h3>
+          <p>Uma semana em Madrid com treinamentos ligados à metodologia do Atlético de Madrid, amistoso internacional e jogo no Metropolitano. Para jovens de 7 a 17 anos.</p>
+          <div class="meta"><span>15 a 22 de maio de 2027</span><span>Madrid, Espanha</span><span>7 a 17 anos</span></div>
+          <span class="go">Conhecer o programa <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <div class="card igc">
+        <div class="media"><img src="assets/igc-key.jpg" alt="Infinity Games Con: festival internacional de games, cultura pop e entretenimento digital"></div>
+        <div class="body">
+          <span class="kicker">Festival internacional</span>
+          <h3>Infinity Games Con</h3>
+          <p>Festival internacional de games, cultura pop e entretenimento digital. Competições, cosplay, creators, tecnologia e comunidades de vários países em um só lugar.</p>
+          <div class="meta"><span>Novembro de 2027</span><span>Balneário Camboriú, SC</span></div>
+          <span class="go soon">Site em breve</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="sobre">
+  <div class="wrap">
+    <h2>Uma empresa, <span>muitas paixões.</span></h2>
+    <div class="txt">
+      <p>A LTX Global nasceu para conectar pessoas a experiências que elas lembram pelo resto da vida. Atuamos onde esporte, entretenimento e cultura se encontram, com operação internacional e parceiros de referência em cada projeto.</p>
+      <div class="pillars">
+        <div><b>Esporte</b><span>Intercâmbios com clubes europeus.</span></div>
+        <div><b>Games</b><span>Festivais, arenas e competições.</span></div>
+        <div><b>Global</b><span>Brasil, Espanha e América do Sul.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="assets/ltx-global.png" alt="LTX Global">
+    <p>© 2026 LTX Global. Todos os direitos reservados.</p>
+  </div>
+</footer>
+</body></html>
