@@ -29,6 +29,7 @@
   color-scheme:dark;
 }
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{background:var(--night);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
@@ -244,7 +245,7 @@ details p{padding:0 26px 22px;color:#d4d8e2;font-size:16px}
   radial-gradient(40% 50% at 0% 100%,rgba(36,70,150,.4),transparent 70%),var(--night)}
 .contact-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:start}
 .contact h2{font-size:clamp(42px,6vw,68px)}
-.form{background:var(--paper);color:var(--paper-ink);border-radius:18px;padding:34px 32px;display:flex;flex-direction:column;gap:18px;box-shadow:0 30px 80px rgba(0,0,0,.4)}
+.form{color-scheme:light;background:var(--paper);color:var(--paper-ink);border-radius:18px;padding:34px 32px;display:flex;flex-direction:column;gap:18px;box-shadow:0 30px 80px rgba(0,0,0,.4)}
 .form h3{font-family:var(--body);text-transform:none;font-weight:700;font-size:30px;letter-spacing:0;line-height:1.15}
 .form .hint{color:#6c7489;font-size:15px;margin-top:-6px}
 .fields{display:grid;grid-template-columns:1fr 1fr;gap:16px 16px}
@@ -258,6 +259,10 @@ details p{padding:0 26px 22px;color:#d4d8e2;font-size:16px}
 .consent input{width:20px;height:20px;margin-top:2px;flex:none;accent-color:var(--gold-deep)}
 .consent a{color:var(--gold-deep)}
 .form .btn{min-height:52px;width:100%}
+.field.full{grid-column:1/-1}
+.indicado{flex-direction:row;align-items:center;gap:10px;border:1px solid #e3d29b;background:#fbf6e6;border-radius:8px;padding:12px 14px;font-size:15px}
+.indicado span{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8a6d1f}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 .status{font-size:14px;border-radius:8px;padding:12px 14px;background:#f4efe0;color:#5a4a1a}
 @media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
 @media (max-width:560px){.fields{grid-template-columns:1fr}.form{padding:28px 20px}}
@@ -502,8 +507,8 @@ footer{background:#14171e;padding-block:56px 40px}
   <div class="wrap stack" style="gap:18px">
     <span class="eyebrow">Escolinhas e clubes parceiros</span>
     <h2>Sua escolinha também pode fazer parte dessa experiência.</h2>
-    <p>Parceiros poderão apresentar o programa às famílias, receber materiais de divulgação e contar com suporte comercial. Remuneração por indicação formalizada conforme contrato.</p>
-    <div style="margin-top:12px"><a class="btn btn-dark" href="#contato">Quero ser uma escolinha parceira</a></div>
+    <p>Escolinhas, escolas particulares e clubes parceiros apresentam o programa às famílias, recebem link exclusivo e kit de divulgação, e ganham 5% de cada inscrição indicada, atleta e acompanhante.</p>
+    <div style="margin-top:12px"><a class="btn btn-dark" href="parceiros/">Quero ser parceiro</a></div>
   </div>
 </section>
 
@@ -559,10 +564,12 @@ footer{background:#14171e;padding-block:56px 40px}
         <div class="field"><label for="f-cidade">Cidade/estado</label><input id="f-cidade" name="cidade" autocomplete="address-level2" required></div>
         <div class="field"><label for="f-email">E-mail <em>(opcional)</em></label><input id="f-email" name="email" type="email" autocomplete="email"></div>
         <div class="field"><label for="f-atleta">Nome do atleta <em>(opcional)</em></label><input id="f-atleta" name="atleta"></div>
-        <div class="field"><label for="f-clube">Escolinha/clube <em>(opcional)</em></label><input id="f-clube" name="clube"></div>
+        <div class="field full" id="f-parceiro-box"><label for="f-parceiro">Escolinha ou escola parceira <em>(opcional)</em></label><input id="f-parceiro" name="parceiro_texto" list="lista-parceiros" autocomplete="off" placeholder="Digite o nome para buscar"><datalist id="lista-parceiros"></datalist></div>
+        <div class="field full indicado" id="f-indicado" hidden><span>Indicação</span><b id="f-indicado-nome"></b></div>
       </div>
+      <div class="hp" aria-hidden="true"><label for="f-site">Site</label><input id="f-site" name="website" tabindex="-1" autocomplete="off"></div>
       <label class="consent" for="f-ok"><input id="f-ok" name="consentimento" type="checkbox" required><span>Autorizo o contato da equipe Football Experience por WhatsApp e e-mail. <a href="#contato">Política de privacidade</a>.</span></label>
-      <button class="btn btn-gold" type="submit">Quero falar com a equipe</button>
+      <button class="btn btn-gold" type="submit" id="f-send">Quero falar com a equipe</button>
       <p class="status" id="status" role="status" hidden></p>
     </form>
   </div>
@@ -578,6 +585,7 @@ footer{background:#14171e;padding-block:56px 40px}
       </div>
       <ul>
         <li><a href="#contato">Contato</a></li>
+        <li><a href="parceiros/">Seja parceiro</a></li>
         <li><a href="#contato">Instagram</a></li>
         <li><a href="#contato">Política de Privacidade</a></li>
         <li><a href="#contato">Termos e Condições</a></li>
@@ -591,9 +599,10 @@ footer{background:#14171e;padding-block:56px 40px}
 </footer>
 
 <script>
-/* Configure antes de publicar no site: */
-const LEAD_ENDPOINT = "";    // URL do CRM/webhook que recebe o formulário (POST JSON)
+/* Configure antes de publicar: */
 const WHATSAPP_NUMBER = "";  // ex.: "5548999999999"
+const API_LEAD = "api/lead.php";
+const API_PARCEIROS = "api/parceiros.php";
 
 (function(){
   const wa = document.getElementById('wa');
@@ -608,8 +617,33 @@ const WHATSAPP_NUMBER = "";  // ex.: "5548999999999"
     if (d.open) items.forEach(o => { if (o !== d) o.open = false; });
   }));
 
+  // Atribuição de parceiro: o link ?p=codigo vale por 90 dias (primeiro parceiro registrado).
+  const store = { get(k){ try { return JSON.parse(localStorage.getItem(k)); } catch(_) { return null; } }, set(k,v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(_) {} } };
+  const params = new URLSearchParams(location.search);
+  const now = Date.now(), TTL = 90 * 864e5;
+  let ref = store.get('fx_parceiro');
+  if (ref && now - ref.t > TTL) ref = null;
+  const fromUrl = (params.get('p') || '').toLowerCase().replace(/[^a-z0-9-]/g, '');
+  if (!ref && fromUrl) { ref = { code: fromUrl, t: now }; store.set('fx_parceiro', ref); }
+  let utm = store.get('fx_utm');
+  const utmNow = ['utm_source','utm_medium','utm_campaign','utm_content'].filter(k => params.get(k)).map(k => k + '=' + params.get(k)).join('&');
+  if (utmNow && !utm) { utm = utmNow; store.set('fx_utm', utm); }
+
+  let partners = [];
+  const list = document.getElementById('lista-parceiros');
+  const box = document.getElementById('f-parceiro-box');
+  const tag = document.getElementById('f-indicado');
+  const tagName = document.getElementById('f-indicado-nome');
+  fetch(API_PARCEIROS).then(r => r.ok ? r.json() : null).then(j => {
+    partners = (j && Array.isArray(j.partners)) ? j.partners : [];
+    partners.forEach(p => { const o = document.createElement('option'); o.value = p.city ? p.name + ' — ' + p.city : p.name; list.appendChild(o); });
+    const hit = ref && partners.find(p => p.code === ref.code);
+    if (hit) { tagName.textContent = hit.name; tag.hidden = false; box.hidden = true; }
+  }).catch(() => {});
+
   const form = document.getElementById('lead');
   const status = document.getElementById('status');
+  const send = document.getElementById('f-send');
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     let ok = true;
@@ -619,20 +653,35 @@ const WHATSAPP_NUMBER = "";  // ex.: "5548999999999"
       if (bad) ok = false;
     });
     const wpp = form.querySelector('#f-wpp');
-    if (wpp.value && wpp.value.replace(/\D/g,'').length < 10) { wpp.setAttribute('aria-invalid','true'); ok = false; }
+    const digits = wpp.value.replace(/\D/g,'').length;
+    if (wpp.value && (digits < 10 || digits > 13)) { wpp.setAttribute('aria-invalid','true'); ok = false; }
     status.hidden = false;
     if (!ok) { status.textContent = "Preencha os 4 campos obrigatórios, com WhatsApp e DDD, e marque a autorização de contato."; return; }
     const data = Object.fromEntries(new FormData(form).entries());
-    data.origem = "LP Madrid 2027"; data.data_envio = new Date().toISOString();
-    if (!LEAD_ENDPOINT) { status.textContent = "Formulário em configuração: os dados ainda não estão sendo enviados."; return; }
+    data.consentimento = true;
+    data.utm = utm || '';
+    data.pagina = location.pathname;
+    const linked = ref && partners.find(p => p.code === ref.code);
+    if (linked) {
+      data.parceiro = linked.code; data.parceiro_origem = 'link';
+    } else if (data.parceiro_texto) {
+      const typed = data.parceiro_texto.split(' — ')[0].trim().toLowerCase();
+      const match = partners.find(p => p.name.toLowerCase() === typed);
+      if (match) { data.parceiro = match.code; data.parceiro_origem = 'declarado'; }
+      else if (ref) { data.parceiro = ref.code; data.parceiro_origem = 'link'; }
+    } else if (ref) {
+      data.parceiro = ref.code; data.parceiro_origem = 'link';
+    }
+    send.disabled = true; status.textContent = "Enviando…";
     try {
-      const r = await fetch(LEAD_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
-      if (!r.ok) throw new Error();
+      const r = await fetch(API_LEAD, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok || !j.ok) throw new Error();
       form.reset();
       status.textContent = "Recebemos seu interesse. Nossa equipe entra em contato pelo WhatsApp.";
     } catch (_) {
       status.textContent = "Não foi possível enviar agora. Verifique sua conexão e tente de novo.";
-    }
+    } finally { send.disabled = false; }
   });
 })();
 </script>

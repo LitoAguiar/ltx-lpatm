@@ -1,0 +1,362 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Parceiros Football Experience</title>
+<meta name="description" content="Programa de parceiros do Football Experience Madrid 2027: escolinhas, escolas e clubes indicam famílias e recebem 5% de cada inscrição, atleta e acompanhante.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400;500;600;700;800&display=swap">
+<style>
+/* Layout: mesma identidade da LP do produto (noite, azul Atlético, ouro) — página B2B: o número 5% é o herói, depois o passo a passo, as regras e o cadastro. */
+:root{
+  --night:#0a0c12;
+  --navy:#0f1f42;
+  --navy-2:#162a55;
+  --card:#1a2b56;
+  --gold:#d1b154;
+  --gold-deep:#b8963a;
+  --ink:#f5f3ee;
+  --muted:#b9bfcc;
+  --dim:#8a92a6;
+  --line:rgba(209,177,84,.55);
+  --hair:rgba(255,255,255,.14);
+  --paper:#ffffff;
+  --paper-ink:#1b2440;
+  --field:#eef1f6;
+  --display:"Anton","Impact","Arial Narrow",sans-serif;
+  --body:"Montserrat","Helvetica Neue",Arial,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--night);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(28px,env(safe-area-inset-left,0px));padding-right:max(28px,env(safe-area-inset-right,0px))}
+@media (max-width:480px){.wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}}
+section{position:relative}
+.band{padding-block:88px}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.005em;line-height:.98;text-wrap:balance;margin:0}
+h2{font-size:clamp(34px,5.4vw,56px)}
+.gold{color:var(--gold)}
+p{margin:0}
+.lead{font-size:clamp(17px,1.9vw,20px);font-weight:300;color:#d9dce4;max-width:62ch}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.small{font-size:14px;color:var(--dim)}
+.stack{display:flex;flex-direction:column;gap:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:60px;padding:0 28px;border-radius:6px;font-family:var(--body);font-weight:700;font-size:15px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:2px solid transparent;transition:transform .15s ease,background .15s ease,border-color .15s ease;text-align:center}
+.btn:hover{transform:translateY(-1px)}
+.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.btn-gold{background:var(--gold);color:#16120a}
+.btn-gold:hover{background:#dcbf66}
+.btn-ghost{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.btns{display:flex;flex-wrap:wrap;gap:16px}
+.photo{border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--navy)}
+.photo img{width:100%;height:100%;object-fit:cover}
+
+.ltx{background:#000;border-bottom:1px solid rgba(140,212,58,.35)}
+.ltx .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.ltx-brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.ltx-brand span{font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#a9b0a0}
+.ltx-brand img{height:34px;width:auto}
+.ltx-tag{font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#8cd43a}
+@media (max-width:560px){.ltx-tag{display:none}}
+
+/* HERO */
+.hero{background:radial-gradient(55% 60% at 88% 35%,rgba(209,177,84,.32),transparent 70%),radial-gradient(70% 60% at 0% 80%,rgba(36,70,150,.5),transparent 70%),linear-gradient(180deg,#121a30,#0a0f1d);overflow:hidden}
+.nav{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;padding-block:24px 8px}
+.nav img{height:76px;width:auto}
+.nav a.back{font-size:14px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:#d9dce4}
+.nav a.back:hover{color:var(--gold)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding-block:40px 80px}
+.hero-grid .stack{min-width:0}
+.hero h1{font-size:clamp(40px,6vw,72px)}
+.pct{border:1px solid var(--line);border-radius:20px;background:rgba(15,31,66,.7);padding:36px 32px;display:flex;flex-direction:column;gap:12px}
+.pct b{font-family:var(--display);font-weight:400;font-size:clamp(110px,14vw,170px);line-height:.85;color:var(--gold);font-variant-numeric:tabular-nums}
+.pct span{font-size:18px;font-weight:600;line-height:1.35}
+.pct p{color:var(--muted);font-size:15px}
+.pct hr{border:0;border-top:1px dashed rgba(255,255,255,.25);margin:6px 0}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
+
+/* PASSOS */
+.steps{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.steps li{padding:28px 22px 30px;background:#101f44;display:flex;flex-direction:column;gap:10px;min-width:0}
+.steps li+li{border-left:1px solid var(--line)}
+.steps b{font-family:var(--display);font-weight:400;font-size:44px;line-height:1;color:var(--gold)}
+.steps h3{font-size:24px}
+.steps p{color:#c9cfdb;font-size:15px}
+@media (max-width:1000px){.steps{grid-template-columns:1fr}.steps li+li{border-left:0;border-top:1px solid var(--line)}}
+.how{background:radial-gradient(70% 45% at 50% 0%,#1e3a7a 0%,#13275a 45%,var(--navy) 80%)}
+
+/* RECEBE */
+.get-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.get-grid .photo{aspect-ratio:744/557}
+.list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+.list li{display:flex;gap:14px;align-items:flex-start;font-size:17px;color:#e3e5ec}
+.list svg{flex:none;width:24px;height:24px;color:var(--gold);margin-top:2px}
+@media (max-width:900px){.get-grid{grid-template-columns:1fr}}
+
+/* PRODUTO */
+.product{background:var(--navy);border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+.fact{border:1px solid var(--hair);border-radius:14px;padding:22px 20px;display:flex;flex-direction:column;gap:6px;background:rgba(10,12,18,.35)}
+.fact b{font-family:var(--display);font-weight:400;font-size:30px;line-height:1.05;color:var(--gold);text-transform:uppercase}
+.fact span{font-size:15px;color:#d4d8e2}
+@media (max-width:900px){.facts{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:440px){.facts{grid-template-columns:1fr}}
+
+/* REGRAS */
+.rules{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:40px}
+.rule{background:var(--card);border-radius:14px;padding:26px 24px;display:flex;flex-direction:column;gap:8px}
+.rule h3{font-family:var(--body);font-weight:700;font-size:18px;letter-spacing:.02em;text-transform:none;line-height:1.3}
+.rule p{color:var(--muted);font-size:15.5px}
+.rule.warn{background:transparent;border:1px solid var(--line)}
+@media (max-width:760px){.rules{grid-template-columns:1fr}}
+
+/* CADASTRO */
+.signup{background:radial-gradient(50% 60% at 100% 10%,rgba(209,177,84,.18),transparent 70%),radial-gradient(40% 50% at 0% 100%,rgba(36,70,150,.4),transparent 70%),var(--night)}
+.signup-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
+.form{color-scheme:light;background:var(--paper);color:var(--paper-ink);border-radius:18px;padding:34px 32px;display:flex;flex-direction:column;gap:18px;box-shadow:0 30px 80px rgba(0,0,0,.4)}
+.form h3{font-family:var(--body);text-transform:none;font-weight:700;font-size:28px;letter-spacing:0;line-height:1.15}
+.form .hint{color:#6c7489;font-size:15px;margin-top:-6px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column;gap:8px;min-width:0}
+.field.full{grid-column:1/-1}
+.field label{font-size:14px;font-weight:700}
+.field label em{font-style:normal;font-weight:400;color:#8a90a2}
+.field input,.field select{height:50px;border:1px solid #c9cfdc;border-radius:6px;background:var(--field);padding:0 14px;font:inherit;font-size:16px;color:var(--paper-ink);width:100%}
+.field input::placeholder{color:#9aa1b2}
+[aria-invalid="true"]{border-color:#c0392b!important;background:#fdf0ee!important}
+.consent{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:#3b4560}
+.consent input{width:20px;height:20px;margin-top:2px;flex:none;accent-color:var(--gold-deep)}
+.form .btn{min-height:54px;width:100%}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.status{font-size:14.5px;border-radius:8px;padding:12px 14px;background:#f4efe0;color:#5a4a1a}
+.status.ok{background:#e9f6e6;color:#21522a}
+@media (max-width:900px){.signup-grid{grid-template-columns:1fr}}
+@media (max-width:560px){.fields{grid-template-columns:1fr}.form{padding:26px 18px}}
+
+/* FAQ */
+.faq{border-top:4px solid var(--gold)}
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.qa{display:flex;flex-direction:column;gap:12px}
+details{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:10px}
+details[open]{border-color:rgba(255,255,255,.45)}
+summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 24px;font-weight:700;font-size:17px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";width:9px;height:9px;border-right:2px solid var(--dim);border-bottom:2px solid var(--dim);transform:rotate(45deg) translateY(-3px);transition:transform .2s;flex:none}
+details[open] summary::after{transform:rotate(-135deg) translateY(-2px)}
+details p{padding:0 24px 20px;color:#d4d8e2;font-size:16px}
+@media (max-width:900px){.faq-grid{grid-template-columns:1fr}}
+
+footer{background:#14171e;padding-block:44px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px}
+.foot img.fx{height:70px;width:auto}
+.by{display:flex;align-items:center;gap:12px;font-size:14px;color:#9aa0ad}
+.by img{height:26px;width:auto}
+</style>
+</head><body>
+
+<div class="ltx">
+  <div class="wrap">
+    <a class="ltx-brand" href="../../" aria-label="Ir para a página da LTX Global"><span>Um programa</span><img src="../img/ltx-global.png" alt="LTX Global"></a>
+    <div class="ltx-tag">Programa de parceiros</div>
+  </div>
+</div>
+
+<section class="hero" id="topo">
+  <div class="wrap">
+    <nav class="nav" aria-label="Principal">
+      <a href="../"><img src="../img/fx-escudo.png" alt="Football Experience"></a>
+      <a class="back" href="../">Conhecer o programa Madrid 2027</a>
+    </nav>
+    <div class="hero-grid">
+      <div class="stack">
+        <span class="eyebrow">Escolinhas, escolas particulares e clubes</span>
+        <h1>Leve seus alunos ao Atlético de Madrid. <span class="gold">E sua instituição ganha junto.</span></h1>
+        <p class="lead">Seja parceiro do Football Experience Madrid 2027. Você apresenta o programa às suas famílias, a equipe LTX cuida do atendimento e da venda, e sua instituição recebe comissão por cada inscrição indicada.</p>
+        <div class="btns">
+          <a class="btn btn-gold" href="#cadastro">Quero ser parceiro</a>
+          <a class="btn btn-ghost" href="#como-funciona">Como funciona</a>
+        </div>
+      </div>
+      <div class="pct">
+        <b>5%</b>
+        <span>do valor total de cada inscrição indicada por você, atleta e acompanhante.</span>
+        <hr>
+        <p>Exemplo: a cada R$ 100 mil em inscrições vindas da sua instituição, R$ 5 mil ficam com ela.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band how" id="como-funciona">
+  <div class="wrap">
+    <div class="stack">
+      <span class="eyebrow">Como funciona</span>
+      <h2>Cinco passos, <span class="gold">da adesão à comissão.</span></h2>
+    </div>
+    <ol class="steps">
+      <li><b>1</b><h3>Cadastro</h3><p>Preencha o formulário desta página com os dados da instituição.</p></li>
+      <li><b>2</b><h3>Aprovação</h3><p>A equipe LTX valida o cadastro e envia o termo de adesão.</p></li>
+      <li><b>3</b><h3>Link e QR code</h3><p>Você recebe um link exclusivo e o kit de divulgação com a sua marca.</p></li>
+      <li><b>4</b><h3>Famílias</h3><p>Você apresenta o programa. A LTX faz a reunião de pais, o atendimento e o fechamento.</p></li>
+      <li><b>5</b><h3>Comissão</h3><p>5% de cada inscrição confirmada que veio de você, conforme o termo de adesão.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap get-grid">
+    <div class="stack">
+      <span class="eyebrow">O que o parceiro recebe</span>
+      <h2>Você indica. <span class="gold">A gente faz o resto.</span></h2>
+      <ul class="list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Link e QR code exclusivos: toda inscrição que chega por eles é registrada em nome da sua instituição.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Kit de divulgação com a sua marca: artes para redes e WhatsApp, apresentação e comunicado para as famílias.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Reunião de pais conduzida pela equipe LTX, na sua instituição ou online.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Atendimento, contrato e pagamento feitos pela LTX. Sua equipe não precisa vender.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Acompanhamento das inscrições indicadas por você.</li>
+      </ul>
+    </div>
+    <div class="photo"><img src="../img/atletas-atletico.jpg" alt="Jovens atletas perfilados no estádio" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="band product">
+  <div class="wrap">
+    <div class="stack">
+      <span class="eyebrow">O que você vai apresentar</span>
+      <h2>Uma semana na casa <span class="gold">do Atlético de Madrid.</span></h2>
+      <p class="lead">Treinamentos ligados à metodologia do clube, amistoso internacional, visita ao Metropolitano e Madrid além do futebol. Um programa de experiência, sem seletiva.</p>
+    </div>
+    <div class="facts">
+      <div class="fact"><b>15 a 22 de maio</b><span>Madrid, 2027</span></div>
+      <div class="fact"><b>7 a 17 anos</b><span>Sem exigência de experiência</span></div>
+      <div class="fact"><b>Atleta e acompanhante</b><span>Os dois geram comissão</span></div>
+      <div class="fact"><b>Pacote terrestre</b><span>Passagem aérea não incluída</span></div>
+    </div>
+    <div class="btns" style="margin-top:36px"><a class="btn btn-ghost" href="../">Ver a página do programa</a></div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="stack">
+      <span class="eyebrow">Regras claras</span>
+      <h2>Comissão sem disputa.</h2>
+      <p class="lead">Quem trouxe a família recebe. As regras abaixo estarão no termo de adesão.</p>
+    </div>
+    <div class="rules">
+      <div class="rule"><h3>O link exclusivo garante a indicação</h3><p>Inscrição feita pelo seu link ou QR code fica registrada em nome da sua instituição.</p></div>
+      <div class="rule"><h3>Indicação declarada é validada</h3><p>Se a família escolher sua instituição no formulário sem usar o link, a LTX confirma com você antes de registrar a comissão.</p></div>
+      <div class="rule"><h3>Vale o primeiro registro</h3><p>Se duas instituições indicarem a mesma família, vale o primeiro registro no sistema.</p></div>
+      <div class="rule warn"><h3>Sem promessa de carreira</h3><p>O programa é uma experiência esportiva e cultural. Nenhum parceiro pode apresentá-lo como seletiva, peneira ou caminho para contratação.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band signup" id="cadastro">
+  <div class="wrap signup-grid">
+    <div class="stack">
+      <span class="eyebrow">Cadastro de parceiro</span>
+      <h2>Cadastre sua <span class="gold">instituição.</span></h2>
+      <p class="lead" style="font-size:18px">A equipe LTX analisa o cadastro e entra em contato pelo WhatsApp com o termo de adesão, o link exclusivo e o kit de divulgação.</p>
+      <p class="small" style="font-size:15px">Dúvidas antes de se cadastrar? Veja as perguntas frequentes abaixo.</p>
+    </div>
+    <form class="form" id="partner" novalidate>
+      <h3>Quero ser parceiro</h3>
+      <p class="hint">Leva cerca de 2 minutos.</p>
+      <div class="fields">
+        <div class="field"><label for="p-tipo">Tipo de instituição</label>
+          <select id="p-tipo" name="tipo" required>
+            <option value="">Selecione</option>
+            <option>Escolinha de futebol</option><option>Escola particular</option><option>Clube</option><option>Projeto esportivo</option><option>Outro</option>
+          </select></div>
+        <div class="field"><label for="p-inst">Nome da instituição</label><input id="p-inst" name="instituicao" autocomplete="organization" required></div>
+        <div class="field"><label for="p-cnpj">CNPJ</label><input id="p-cnpj" name="cnpj" inputmode="numeric" placeholder="00.000.000/0000-00" required></div>
+        <div class="field"><label for="p-cidade">Cidade/estado</label><input id="p-cidade" name="cidade" placeholder="Florianópolis/SC" required></div>
+        <div class="field"><label for="p-resp">Seu nome</label><input id="p-resp" name="responsavel" autocomplete="name" required></div>
+        <div class="field"><label for="p-cargo">Cargo <em>(opcional)</em></label><input id="p-cargo" name="cargo" autocomplete="organization-title"></div>
+        <div class="field"><label for="p-wpp">WhatsApp com DDD</label><input id="p-wpp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(48) 90000-0000" required></div>
+        <div class="field"><label for="p-email">E-mail</label><input id="p-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="p-alunos">Número de alunos</label>
+          <select id="p-alunos" name="alunos" required>
+            <option value="">Selecione</option><option>Até 50</option><option>51 a 150</option><option>151 a 400</option><option>Mais de 400</option>
+          </select></div>
+        <div class="field"><label for="p-idades">Faixas de idade atendidas <em>(opcional)</em></label><input id="p-idades" name="idades" placeholder="Ex.: 7 a 15 anos"></div>
+        <div class="field full"><label for="p-insta">Instagram da instituição <em>(opcional)</em></label><input id="p-insta" name="instagram" placeholder="@suainstituicao"></div>
+      </div>
+      <div class="hp" aria-hidden="true"><label for="p-site">Site</label><input id="p-site" name="website" tabindex="-1" autocomplete="off"></div>
+      <label class="consent" for="p-ok"><input id="p-ok" name="consentimento" type="checkbox" required><span>Autorizo o contato da equipe LTX Global por WhatsApp e e-mail sobre o programa de parceiros.</span></label>
+      <button class="btn btn-gold" type="submit" id="p-send">Enviar cadastro</button>
+      <p class="status" id="p-status" role="status" hidden></p>
+    </form>
+  </div>
+</section>
+
+<section class="band faq" id="faq">
+  <div class="wrap faq-grid">
+    <div class="stack">
+      <span class="eyebrow">Perguntas frequentes</span>
+      <h2>Antes de se cadastrar.</h2>
+    </div>
+    <div class="qa">
+      <details open><summary>Quem pode ser parceiro?</summary><p>Escolinhas de futebol, escolas particulares, clubes e projetos esportivos com CNPJ.</p></details>
+      <details><summary>Como a comissão é calculada?</summary><p>5% do valor total de cada inscrição que veio da sua instituição, somando atleta e acompanhante.</p></details>
+      <details><summary>Quando a comissão é paga?</summary><p>Depois da confirmação do pagamento da inscrição, nos prazos definidos no termo de adesão.</p></details>
+      <details><summary>Minha equipe precisa vender?</summary><p>Não. Você apresenta e indica. Atendimento, reunião de pais, contrato e pagamento ficam com a equipe LTX.</p></details>
+      <details><summary>Posso indicar famílias que não são alunas?</summary><p>Sim. Toda inscrição feita pelo seu link conta para a sua instituição.</p></details>
+      <details><summary>Até quando as inscrições ficam abertas?</summary><p>Até 8 de maio de 2027, uma semana antes da viagem, ou até as vagas acabarem.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <a href="../"><img class="fx" src="../img/fx-escudo.png" alt="Football Experience"></a>
+    <div class="by">Football Experience é um programa <a href="../../" aria-label="Ir para a página da LTX Global"><img src="../img/ltx-global.png" alt="LTX Global"></a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const API = "../api/parceiro.php";
+  const form = document.getElementById('partner');
+  const status = document.getElementById('p-status');
+  const send = document.getElementById('p-send');
+  const cnpj = document.getElementById('p-cnpj');
+  cnpj.addEventListener('input', () => {
+    const d = cnpj.value.replace(/\D/g,'').slice(0,14);
+    cnpj.value = d.replace(/^(\d{2})(\d)/,'$1.$2').replace(/^(\d{2})\.(\d{3})(\d)/,'$1.$2.$3').replace(/\.(\d{3})(\d)/,'.$1/$2').replace(/(\d{4})(\d)/,'$1-$2');
+  });
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    let ok = true;
+    form.querySelectorAll('[required]').forEach(i => {
+      const bad = i.type === 'checkbox' ? !i.checked : !String(i.value).trim();
+      i.setAttribute('aria-invalid', bad ? 'true' : 'false');
+      if (bad) ok = false;
+    });
+    const checks = [['#p-cnpj', v => v.replace(/\D/g,'').length === 14], ['#p-wpp', v => { const n = v.replace(/\D/g,'').length; return n >= 10 && n <= 13; }], ['#p-email', v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)]];
+    checks.forEach(([sel, test]) => { const el = form.querySelector(sel); if (!test(el.value)) { el.setAttribute('aria-invalid','true'); ok = false; } });
+    status.hidden = false; status.classList.remove('ok');
+    if (!ok) { status.textContent = "Revise os campos marcados: CNPJ com 14 números, WhatsApp com DDD, e-mail válido e autorização de contato."; return; }
+    const data = Object.fromEntries(new FormData(form).entries());
+    data.consentimento = true;
+    send.disabled = true; status.textContent = "Enviando…";
+    try {
+      const r = await fetch(API, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok || !j.ok) throw new Error();
+      form.reset();
+      status.classList.add('ok');
+      status.textContent = "Cadastro recebido. A equipe LTX entra em contato pelo WhatsApp com o termo de adesão e o seu link exclusivo.";
+    } catch (_) {
+      status.textContent = "Não foi possível enviar agora. Verifique sua conexão e tente de novo.";
+    } finally { send.disabled = false; }
+  });
+})();
+</script>
+</body></html>
