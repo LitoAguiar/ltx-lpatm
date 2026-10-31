@@ -1,0 +1,496 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Infinity Games Con 2027</title>
+<meta name="description" content="Infinity Games Con: festival internacional de games, cultura pop e entretenimento digital. Novembro de 2027, Balneário Camboriú (SC). Um evento LTX Global.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,800;1,900&family=Barlow:wght@300;400;500;600;700&family=Rajdhani:wght@600;700&display=swap">
+<style>
+/* Layout: palco noturno — faixas escuras com bordas chanfradas de HUD, gradiente violeta→ciano da marca apenas em títulos e CTAs, fotos do evento como telões. */
+:root{
+  --bg:#07060f;
+  --bg-2:#0d0b1c;
+  --panel:#120f26;
+  --line:rgba(170,120,255,.28);
+  --ink:#f4f2ff;
+  --muted:#aaa6c4;
+  --violet:#b14cf2;
+  --magenta:#e04bd8;
+  --blue:#4a5cf7;
+  --cyan:#3fd2f6;
+  --grad:linear-gradient(90deg,#c24cf0 0%,#7a52f5 50%,#3fd2f6 100%);
+  --display:"Exo 2","Arial Black",sans-serif;
+  --body:"Barlow","Helvetica Neue",Arial,sans-serif;
+  --hud:"Rajdhani","Barlow",Arial,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(28px,env(safe-area-inset-left,0px));padding-right:max(28px,env(safe-area-inset-right,0px))}
+@media (max-width:480px){.wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}}
+.band{padding-block:96px;position:relative}
+h1,h2,h3{margin:0;font-family:var(--display);font-weight:900;font-style:italic;text-transform:uppercase;line-height:1;letter-spacing:-.01em;text-wrap:balance}
+h2{font-size:clamp(36px,5.4vw,62px)}
+.g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.08em}
+p{margin:0}
+.lead{font-size:clamp(17px,1.8vw,20px);font-weight:300;color:#d5d2ea;max-width:60ch}
+.lead b{font-weight:600;color:var(--cyan)}
+.hud{font-family:var(--hud);font-weight:700;font-size:15px;letter-spacing:.22em;text-transform:uppercase}
+.eyebrow{font-family:var(--hud);font-weight:700;font-size:15px;letter-spacing:.28em;text-transform:uppercase;color:var(--cyan)}
+.stack{display:flex;flex-direction:column;gap:24px}
+.cut{clip-path:polygon(16px 0,100% 0,100% calc(100% - 16px),calc(100% - 16px) 100%,0 100%,0 16px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:58px;padding:0 28px;font-family:var(--hud);font-weight:700;font-size:16px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border:0;cursor:pointer;clip-path:polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px);transition:filter .15s,transform .15s}
+.btn:hover{filter:brightness(1.12);transform:translateY(-1px)}
+.btn-grad{background:var(--grad);color:#fff}
+.btn-line{background:linear-gradient(var(--bg),var(--bg)) padding-box,var(--grad) border-box;border:2px solid transparent;color:var(--ink);clip-path:none;border-radius:2px}
+.btns{display:flex;flex-wrap:wrap;gap:16px}
+.shot{position:relative;overflow:hidden;background:var(--panel)}
+.shot img{width:100%;height:100%;object-fit:cover}
+.shot::after{content:"";position:absolute;inset:0;border:1px solid var(--line);pointer-events:none;clip-path:inherit}
+
+/* LTX */
+.ltx{background:#000;border-bottom:1px solid rgba(140,212,58,.35)}
+.ltx .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.ltx a{display:flex;align-items:center;gap:14px;text-decoration:none}
+.ltx a span{font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#a9b0a0}
+.ltx img{height:32px;width:auto}
+.ltx nav{display:flex;gap:26px}
+.ltx nav a{font-family:var(--hud);font-size:14px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#d8d4ee}
+.ltx nav a:hover{color:var(--cyan)}
+@media (max-width:720px){.ltx nav{display:none}}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero .bg{position:absolute;inset:0}
+.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:.42}
+.hero .bg::after{content:"";position:absolute;inset:0;background:
+  radial-gradient(60% 70% at 50% 35%,rgba(7,6,15,.2),rgba(7,6,15,.92) 80%),
+  linear-gradient(180deg,rgba(7,6,15,.55),rgba(7,6,15,.2) 40%,var(--bg) 100%)}
+.hero .wrap{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:28px;padding-block:64px 56px}
+.hero .logo{width:min(620px,90%);height:auto;filter:drop-shadow(0 0 36px rgba(122,82,245,.45))}
+.hero .tag{font-family:var(--hud);font-weight:700;font-size:clamp(18px,2.4vw,26px);letter-spacing:.08em;text-transform:uppercase;line-height:1.25}
+.hero .tag span{display:block}
+.facts{display:grid;grid-template-columns:repeat(3,auto);gap:0;border:1px solid var(--line);background:rgba(13,11,28,.75);backdrop-filter:blur(6px)}
+.facts div{display:flex;align-items:center;gap:14px;padding:16px 26px;text-align:left}
+.facts div+div{border-left:1px solid var(--line)}
+.facts svg{width:30px;height:30px;flex:none}
+.facts b{display:block;font-family:var(--hud);font-size:19px;letter-spacing:.06em;text-transform:uppercase;line-height:1.1}
+.facts small{display:block;font-family:var(--hud);font-size:14px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--magenta)}
+.facts div:nth-child(2) small{color:var(--cyan)}
+@media (max-width:760px){.facts{grid-template-columns:1fr;width:100%}.facts div+div{border-left:0;border-top:1px solid var(--line)}}
+.ticker{border-top:1px solid var(--line);background:rgba(7,6,15,.9);position:relative}
+.ticker ul{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 34px;list-style:none;margin:0;padding:18px 0}
+.ticker li{font-family:var(--hud);font-weight:700;font-size:15px;letter-spacing:.24em;text-transform:uppercase;color:#cfcbe8}
+.ticker li::before{content:"•";color:var(--magenta);margin-right:34px}
+.ticker li:first-child::before{content:none}
+@media (max-width:600px){.ticker li::before{content:none}}
+
+/* O QUE É */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about-grid .shot{aspect-ratio:1143/480}
+.icons6{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid var(--line);margin-top:56px}
+.icons6 div{padding:26px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px}
+.icons6 div+div{border-left:1px solid var(--line)}
+.icons6 svg{width:38px;height:38px}
+.icons6 span{font-family:var(--hud);font-weight:700;font-size:15px;letter-spacing:.06em;text-transform:uppercase;line-height:1.25}
+.icons6 div:nth-child(odd) svg{color:var(--magenta)}
+.icons6 div:nth-child(even) svg{color:var(--cyan)}
+@media (max-width:900px){.about-grid{grid-template-columns:1fr}.icons6{grid-template-columns:repeat(3,1fr)}.icons6 div+div{border-left:0}.icons6 div{border-bottom:1px solid var(--line)}.icons6 div:not(:nth-child(3n)){border-right:1px solid var(--line)}}
+@media (max-width:480px){.icons6{grid-template-columns:repeat(2,1fr)}.icons6 div:not(:nth-child(3n)){border-right:0}.icons6 div:nth-child(odd){border-right:1px solid var(--line)}}
+
+/* ARENA */
+.arena{background:linear-gradient(180deg,var(--bg),var(--bg-2))}
+.arena .shot{aspect-ratio:1137/740;margin-top:44px}
+.plats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:-90px;position:relative;z-index:1;padding-inline:28px}
+.plat{background:rgba(18,15,38,.96);border:1px solid var(--line)}
+.plat h3{font-size:24px;padding:16px 22px;background:linear-gradient(90deg,rgba(177,76,242,.55),rgba(74,92,247,.35))}
+.plat:nth-child(3) h3{background:linear-gradient(90deg,rgba(74,92,247,.45),rgba(63,210,246,.45))}
+.plat ul{list-style:none;margin:0;padding:8px 22px 14px}
+.plat li{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08);font-family:var(--hud);font-weight:700;font-size:17px;letter-spacing:.08em;text-transform:uppercase}
+.plat li:last-child{border-bottom:0}
+.note{margin-top:18px;font-size:14px;color:var(--muted)}
+@media (max-width:860px){.plats{grid-template-columns:1fr;margin-top:20px;padding-inline:0}}
+
+/* CREATOR / COSPLAY */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.split .media{display:grid;gap:14px}
+.split .media .shot:first-child{aspect-ratio:1163/656}
+.split .media .shot:last-child{aspect-ratio:717/340}
+.items{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.it{border:1px solid var(--line);background:var(--panel);padding:18px 18px 20px;display:flex;flex-direction:column;gap:6px}
+.it b{font-family:var(--hud);font-size:17px;letter-spacing:.08em;text-transform:uppercase;color:var(--magenta)}
+.it:nth-child(even) b{color:var(--cyan)}
+.it span{font-size:15px;color:var(--muted);line-height:1.45}
+@media (max-width:900px){.split{grid-template-columns:1fr}}
+@media (max-width:440px){.items{grid-template-columns:1fr}}
+.cosplay{background:radial-gradient(60% 60% at 85% 40%,rgba(224,75,216,.18),transparent 70%),var(--bg-2)}
+.cosplay .shot{aspect-ratio:1387/540}
+
+/* INDIE & TECH */
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:48px}
+.tile{position:relative;aspect-ratio:470/390;overflow:hidden;border:1px solid var(--line)}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.tile:hover img{transform:scale(1.04)}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(7,6,15,.92))}
+.tile div{position:absolute;left:18px;right:18px;bottom:16px;z-index:1}
+.tile b{display:block;font-family:var(--hud);font-size:20px;letter-spacing:.08em;text-transform:uppercase}
+.tile span{font-size:15px;color:#cfcbe8}
+@media (max-width:860px){.tiles{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.tiles{grid-template-columns:1fr}}
+
+/* PÚBLICO */
+.publico{background:linear-gradient(180deg,var(--bg-2),var(--bg))}
+.pub-media{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pub-media .shot{aspect-ratio:4/3}
+.cards5{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:40px}
+.c5{border:1px solid var(--line);background:var(--panel);padding:22px 16px;display:flex;flex-direction:column;gap:8px;text-align:center;align-items:center}
+.c5 svg{width:34px;height:34px;color:var(--violet)}
+.c5:nth-child(even) svg{color:var(--cyan)}
+.c5 b{font-family:var(--hud);font-size:18px;letter-spacing:.06em;text-transform:uppercase}
+.c5 span{font-size:14px;color:var(--muted);line-height:1.45}
+@media (max-width:960px){.cards5{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:560px){.cards5{grid-template-columns:repeat(2,1fr)}.pub-media{grid-template-columns:1fr}}
+
+/* INTERNACIONAL */
+.intl .shot{aspect-ratio:1527/860;margin-top:40px}
+.intl .row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.intl .row span{border:1px solid var(--line);padding:10px 18px;font-family:var(--hud);font-weight:700;font-size:16px;letter-spacing:.12em;text-transform:uppercase}
+
+/* METAS */
+.metas{background:radial-gradient(70% 60% at 50% 0%,rgba(122,82,245,.25),transparent 70%),var(--bg)}
+.nums{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:44px}
+.num{border:1px solid var(--line);background:var(--panel);padding:26px 14px;text-align:center;display:flex;flex-direction:column;gap:8px}
+.num b{font-family:var(--display);font-style:italic;font-weight:900;font-size:clamp(34px,3.6vw,48px);line-height:1;font-variant-numeric:tabular-nums}
+.num:nth-child(odd) b{color:var(--magenta)}
+.num:nth-child(even) b{color:var(--cyan)}
+.num:last-child b{font-size:clamp(22px,2.2vw,28px);line-height:1.2}
+.num span{font-family:var(--hud);font-weight:700;font-size:15px;letter-spacing:.1em;text-transform:uppercase}
+@media (max-width:960px){.nums{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:480px){.nums{grid-template-columns:repeat(2,1fr)}}
+
+/* PARCEIROS */
+.partners{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.partners .bg{position:absolute;inset:0}
+.partners .bg img{width:100%;height:100%;object-fit:cover;opacity:.28}
+.partners .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 25%,rgba(7,6,15,.6))}
+.partners .wrap{position:relative}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:36px}
+@media (max-width:900px){.why{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:440px){.why{grid-template-columns:1fr}}
+
+/* CONTATO */
+.contact-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:start}
+.form{background:var(--panel);border:1px solid var(--line);padding:34px 30px;display:flex;flex-direction:column;gap:18px}
+.form h3{font-size:30px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column;gap:8px;min-width:0}
+.field.full{grid-column:1/-1}
+.field label{font-family:var(--hud);font-weight:700;font-size:15px;letter-spacing:.1em;text-transform:uppercase}
+.field label em{font-style:normal;font-weight:600;color:var(--muted);text-transform:none;letter-spacing:0}
+.field input,.field select{height:52px;border:1px solid rgba(170,120,255,.4);background:#0a0818;color:var(--ink);padding:0 14px;font:inherit;font-size:16px;width:100%;border-radius:2px}
+.field input::placeholder{color:#6f6a8e}
+[aria-invalid="true"]{border-color:#ff5c7a!important}
+.consent{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--muted)}
+.consent input{width:20px;height:20px;margin-top:3px;flex:none;accent-color:var(--violet)}
+.form .btn{width:100%}
+.status{font-size:15px;padding:12px 14px;border:1px solid var(--line);background:#0a0818}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+@media (max-width:560px){.fields{grid-template-columns:1fr}.form{padding:26px 18px}}
+
+footer{border-top:1px solid var(--line);padding-block:44px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px}
+.foot .igc{height:64px;width:auto}
+.by{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--muted)}
+.by img{height:26px;width:auto}
+.foot nav{display:flex;gap:22px;flex-wrap:wrap}
+.foot nav a{font-family:var(--hud);font-weight:700;font-size:14px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none}
+.foot nav a:hover{color:var(--cyan)}
+</style>
+</head><body>
+
+<!-- LTX GLOBAL -->
+<div class="ltx">
+  <div class="wrap">
+    <a href="../" aria-label="LTX Global"><span>Um evento</span><img src="img/ltx-global.png" alt="LTX Global"></a>
+    <nav aria-label="Principal">
+      <a href="#evento">O evento</a>
+      <a href="#arena">Arena</a>
+      <a href="#parceiros">Parceiros</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="hero" id="topo">
+  <div class="bg" aria-hidden="true"><img src="img/festival.jpg" alt=""></div>
+  <div class="wrap">
+    <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Infinity Games Con</h1>
+    <img class="logo" src="img/igc-logo.png" alt="Infinity Games Con">
+    <p class="tag"><span>Festival internacional de</span><span class="g">games, cultura pop e entretenimento digital</span></p>
+    <div class="facts">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="#e04bd8" stroke-width="1.6" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4M8 14h2M12 14h2M16 14h0M8 17h2M12 17h2"/></svg><span><b>Novembro</b><small>2027</small></span></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="#3fd2f6" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-6.5-6.2-6.5-11a6.5 6.5 0 0 1 13 0c0 4.8-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg><span><b>Balneário Camboriú</b><small>Santa Catarina · Brasil</small></span></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="#b14cf2" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span><b>Um encontro global</b><small>Diversas nacionalidades</small></span></div>
+    </div>
+    <div class="btns" style="justify-content:center">
+      <a class="btn btn-grad" href="#contato">Quero ser avisado</a>
+      <a class="btn btn-line" href="#parceiros">Seja expositor ou patrocinador</a>
+    </div>
+  </div>
+  <div class="ticker"><div class="wrap"><ul><li>Games</li><li>Competições</li><li>Cosplay</li><li>Creators</li><li>Tecnologia</li><li>Experiências</li></ul></div></div>
+</header>
+
+<!-- O QUE É -->
+<section class="band" id="evento">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="stack">
+        <span class="eyebrow">O evento</span>
+        <h2>O que é o <span class="g">Infinity Games Con?</span></h2>
+        <p class="lead">O Infinity Games Con nasce para ser o principal festival de games e entretenimento digital do Sul da América do Sul, reunindo jogadores, criadores de conteúdo, desenvolvedores, marcas e comunidades em uma experiência de competição, inovação e entretenimento.</p>
+        <p class="lead">Um ponto de encontro para diferentes gerações e nacionalidades, conectando <b>games, tecnologia, cultura pop, cosplay e creators</b> em um ambiente feito para celebrar o presente e o futuro da indústria dos jogos.</p>
+      </div>
+      <div class="shot cut"><img src="img/arena-gameon.jpg" alt="Jogador com headset diante dos telões da arena"></div>
+    </div>
+    <div class="icons6">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3M12 14v4M8 21h8M9 18h6"/></svg><span>Competições e arenas gamer</span></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8.5 5 3.5-5 3.5z"/></svg><span>Criadores e influenciadores</span></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4M10 10h4v4h-4z"/></svg><span>Tecnologia e desenvolvimento</span></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8c3-2 6-2 9 0 3-2 6-2 9 0-.5 5-3 8-5.5 8-1.6 0-2.5-1.2-3.5-2.6C11 14.8 10.1 16 8.5 16 6 16 3.5 13 3 8z"/><circle cx="8" cy="10.5" r="1"/><circle cx="16" cy="10.5" r="1"/></svg><span>Cosplay e cultura pop</span></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span>Experiência internacional</span></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5"/><path d="M15.5 4.7a3.5 3.5 0 0 1 0 6.6M18 14.8c2 .8 3.2 2.5 3.5 5.2"/></svg><span>Networking e negócios</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ARENA -->
+<section class="band arena" id="arena">
+  <div class="wrap">
+    <div class="stack">
+      <span class="eyebrow">Arena Games</span>
+      <h2>Competições épicas. <span class="g">Momentos inesquecíveis.</span></h2>
+    </div>
+    <div class="shot cut"><img src="img/arena-palco.jpg" alt="Palco da arena com troféu, telões e torcida" loading="lazy"></div>
+    <div class="plats">
+      <div class="plat"><h3>Mobile</h3><ul><li>Brawl Stars</li><li>Clash Royale</li><li>Free Fire</li><li>PUBG Mobile</li></ul></div>
+      <div class="plat"><h3>PC</h3><ul><li>League of Legends</li><li>Valorant</li><li>Counter-Strike 2</li><li>Fortnite</li></ul></div>
+      <div class="plat"><h3>Console</h3><ul><li>EA FC</li><li>Mortal Kombat</li><li>Street Fighter</li><li>Mario Kart</li><li>Tekken</li></ul></div>
+    </div>
+    <p class="note">Modalidades previstas, sujeitas a confirmação. Os nomes dos jogos pertencem aos seus respectivos donos.</p>
+  </div>
+</section>
+
+<!-- CREATOR STAGE -->
+<section class="band">
+  <div class="wrap split">
+    <div class="stack">
+      <span class="eyebrow">Creator Stage</span>
+      <h2>Onde criadores <span class="g">inspiram e conectam.</span></h2>
+      <p class="lead">Um palco dedicado aos criadores de conteúdo digital que movimentam a cultura gamer e o entretenimento online.</p>
+      <div class="items">
+        <div class="it"><b>Influenciadores</b><span>Encontros com nomes do cenário gamer e pop.</span></div>
+        <div class="it"><b>Podcasts</b><span>Gravações ao vivo no palco.</span></div>
+        <div class="it"><b>Streamers</b><span>Lives, desafios e interação em tempo real.</span></div>
+        <div class="it"><b>Meet &amp; Greet</b><span>Conexão direta entre fãs e criadores.</span></div>
+        <div class="it"><b>Painéis ao vivo</b><span>Debates sobre o futuro dos games e da criação de conteúdo.</span></div>
+        <div class="it"><b>Criadores</b><span>Conteúdo multiplataforma que inspira e entretém.</span></div>
+      </div>
+    </div>
+    <div class="media">
+      <div class="shot cut"><img src="img/creator-stage.jpg" alt="Painel com criadores de conteúdo no Creator Stage" loading="lazy"></div>
+      <div class="shot cut"><img src="img/streamer.jpg" alt="Streamer ao vivo com headset" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- COSPLAY -->
+<section class="band cosplay">
+  <div class="wrap">
+    <div class="split" style="align-items:start">
+      <div class="stack">
+        <span class="eyebrow">Cosplay &amp; Pop Culture</span>
+        <h2>Onde a imaginação <span class="g">ganha vida.</span></h2>
+        <p class="lead">Celebre seus personagens favoritos, conheça talentos e mergulhe em um universo de criatividade, paixão e diversidade. Aqui, todo fã é protagonista.</p>
+      </div>
+      <div class="items">
+        <div class="it"><b>Concursos de cosplay</b><span>Competições com premiações.</span></div>
+        <div class="it"><b>Áreas instagramáveis</b><span>Cenários temáticos para fotos e vídeos.</span></div>
+        <div class="it"><b>Meet &amp; Greet</b><span>Encontros com atores, dubladores e ilustradores.</span></div>
+        <div class="it"><b>Artist Alley e merch</b><span>Produtos exclusivos e colecionáveis.</span></div>
+        <div class="it" style="grid-column:1/-1"><b>K-pop, anime e muito mais</b><span>Shows, danças, painéis e atrações especiais.</span></div>
+      </div>
+    </div>
+    <div class="shot cut" style="margin-top:44px"><img src="img/show.jpg" alt="Público diante do palco principal do festival" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- INDIE & TECH -->
+<section class="band">
+  <div class="wrap">
+    <div class="stack">
+      <span class="eyebrow">Indie &amp; Tech</span>
+      <h2>Inovação construindo <span class="g">o futuro dos games.</span></h2>
+      <p class="lead">Um espaço dedicado a desenvolvedores independentes, startups, tecnologia e educação, impulsionando o crescimento da indústria gamer em Santa Catarina.</p>
+    </div>
+    <div class="tiles">
+      <div class="tile"><img src="img/indie-zone.jpg" alt="Indie Zone com estações de jogo" loading="lazy"><div><b>Jogos indies</b><span>Novos jogos, talentos e ideias.</span></div></div>
+      <div class="tile"><img src="img/vr.jpg" alt="Visitante com óculos de realidade virtual" loading="lazy"><div><b>Realidade virtual</b><span>Experiências imersivas.</span></div></div>
+      <div class="tile"><img src="img/pitch.jpg" alt="Apresentação no palco de pitch de startups" loading="lazy"><div><b>Startups</b><span>Pitches e conexões com investidores.</span></div></div>
+      <div class="tile"><img src="img/robotica.jpg" alt="Braço robótico em exposição" loading="lazy"><div><b>Robótica e hardware</b><span>Tecnologia que move os games.</span></div></div>
+      <div class="tile"><img src="img/devtalks.jpg" alt="Palestra técnica para desenvolvedores" loading="lazy"><div><b>Dev talks e workshops</b><span>Conteúdo técnico com especialistas.</span></div></div>
+      <div class="tile"><img src="img/educacao.jpg" alt="Jovens em atividade de formação com notebooks" loading="lazy"><div><b>Educação e carreira</b><span>Mentorias e oportunidades.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PÚBLICO -->
+<section class="band publico">
+  <div class="wrap">
+    <div class="split">
+      <div class="stack">
+        <span class="eyebrow">Público</span>
+        <h2>Um encontro <span class="g">para todos.</span></h2>
+        <p class="lead">O Infinity Games Con conecta gerações e perfis em um ambiente inclusivo, dinâmico e feito para quem vive a paixão gamer.</p>
+      </div>
+      <div class="pub-media">
+        <div class="shot cut"><img src="img/amigos.jpg" alt="Dois amigos jogando no celular no pavilhão" loading="lazy"></div>
+        <div class="shot cut"><img src="img/familia.jpg" alt="Família jogando videogame junta" loading="lazy"></div>
+      </div>
+    </div>
+    <div class="cards5">
+      <div class="c5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2.5" y="7" width="19" height="11" rx="5.5"/><path d="M7 10.5v4M5 12.5h4"/><circle cx="16" cy="11" r="1"/><circle cx="18" cy="13.5" r="1"/></svg><b>Jogadores</b><span>Dos casuais aos hardcore.</span></div>
+      <div class="c5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="m10.5 8 3.5 2-3.5 2zM8 20h8M12 16v4"/></svg><b>Creators</b><span>Streamers, youtubers e influenciadores.</span></div>
+      <div class="c5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 8h18M10 13l-2 2 2 2M14 13l2 2-2 2"/></svg><b>Desenvolvedores</b><span>Profissionais e estúdios de todos os tamanhos.</span></div>
+      <div class="c5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><b>Fãs e famílias</b><span>Games, cultura pop e tecnologia.</span></div>
+      <div class="c5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><b>Visitantes</b><span>De diversas regiões e países.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- INTERNACIONAL -->
+<section class="band intl">
+  <div class="wrap">
+    <div class="stack">
+      <span class="eyebrow">Experiência internacional</span>
+      <h2>Um evento. Vários países. <span class="g">Uma só comunidade.</span></h2>
+      <p class="lead">Visitantes, criadores de conteúdo, expositores e comunidades gamer de diferentes países reunidos em uma experiência internacional na América do Sul.</p>
+    </div>
+    <div class="row"><span>Diversas nacionalidades</span><span>Caravanas internacionais</span><span>Competições internacionais</span><span>Networking global</span><span>Turismo e intercâmbio cultural</span></div>
+    <div class="shot cut"><img src="img/mapa.jpg" alt="Mapa-múndi com conexões de vários países até Santa Catarina" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- METAS -->
+<section class="band metas">
+  <div class="wrap">
+    <div class="stack">
+      <span class="eyebrow">Primeira edição</span>
+      <h2>O tamanho da <span class="g">nossa ambição.</span></h2>
+      <p class="lead">Metas para a primeira edição do Infinity Games Con.</p>
+    </div>
+    <div class="nums">
+      <div class="num"><b>3</b><span>Dias de evento</span></div>
+      <div class="num"><b>10.000</b><span>Visitantes</span></div>
+      <div class="num"><b>100+</b><span>Expositores</span></div>
+      <div class="num"><b>20+</b><span>Creators</span></div>
+      <div class="num"><b>30+</b><span>Atrações</span></div>
+      <div class="num"><b>Diversas</b><span>Nacionalidades</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PARCEIROS -->
+<section class="band partners" id="parceiros">
+  <div class="bg" aria-hidden="true"><img src="img/pavilhao.jpg" alt=""></div>
+  <div class="wrap">
+    <div class="stack">
+      <span class="eyebrow">Marcas, expositores e investidores</span>
+      <h2>Games movimentam pessoas. <span class="g">Pessoas movimentam a economia.</span></h2>
+      <p class="lead">O Infinity Games Con impulsiona turismo, inovação, empreendedorismo e economia criativa em Santa Catarina. Para quem investe: visibilidade, conexões e acesso direto a uma comunidade apaixonada.</p>
+    </div>
+    <div class="why">
+      <div class="it"><b>Visibilidade</b><span>Presença de marca nacional e internacional.</span></div>
+      <div class="it"><b>Negócios</b><span>Networking, parcerias e novas oportunidades.</span></div>
+      <div class="it"><b>Talentos</b><span>Conexão com universidades, startups e jovens criadores.</span></div>
+      <div class="it"><b>Legado</b><span>Impacto duradouro no ecossistema gamer do estado.</span></div>
+    </div>
+    <div class="btns" style="margin-top:36px"><a class="btn btn-grad" href="#contato">Quero patrocinar ou expor</a></div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="band" id="contato">
+  <div class="wrap contact-grid">
+    <div class="stack">
+      <span class="eyebrow">Faça parte</span>
+      <h2>Viva. Jogue. <span class="g">Conecte-se.</span></h2>
+      <p class="lead">Deixe seu contato e receba em primeira mão a abertura de ingressos, a programação e as oportunidades para marcas, expositores e creators.</p>
+    </div>
+    <form class="form cut" id="lead" novalidate>
+      <h3>Quero fazer parte</h3>
+      <div class="fields">
+        <div class="field"><label for="i-nome">Nome</label><input id="i-nome" name="nome" autocomplete="name" required></div>
+        <div class="field"><label for="i-wpp">WhatsApp com DDD</label><input id="i-wpp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(47) 90000-0000" required></div>
+        <div class="field"><label for="i-email">E-mail</label><input id="i-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="i-cidade">Cidade/estado ou país</label><input id="i-cidade" name="cidade" autocomplete="address-level2" required></div>
+        <div class="field"><label for="i-perfil">Tenho interesse como</label>
+          <select id="i-perfil" name="perfil" required>
+            <option value="">Selecione</option>
+            <option>Visitante</option><option>Expositor</option><option>Patrocinador</option><option>Creator</option><option>Desenvolvedor ou startup</option><option>Caravana ou grupo</option><option>Imprensa</option>
+          </select></div>
+        <div class="field"><label for="i-empresa">Empresa <em>(opcional)</em></label><input id="i-empresa" name="empresa" autocomplete="organization"></div>
+      </div>
+      <label class="consent" for="i-ok"><input id="i-ok" name="consentimento" type="checkbox" required><span>Autorizo o contato do Infinity Games Con por WhatsApp e e-mail.</span></label>
+      <button class="btn btn-grad" type="submit">Quero fazer parte</button>
+      <p class="status" id="status" role="status" hidden></p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <img class="igc" src="img/igc-logo.png" alt="Infinity Games Con">
+    <nav aria-label="Rodapé"><a href="#evento">O evento</a><a href="#parceiros">Parceiros</a><a href="#contato">Contato</a><a href="../">LTX Global</a></nav>
+    <div class="by">Um evento <img src="img/ltx-global.png" alt="LTX Global"></div>
+  </div>
+</footer>
+
+<script>
+/* Configure antes de divulgar: */
+const LEAD_ENDPOINT = ""; // URL do CRM/webhook que recebe o formulário (POST JSON)
+
+(function(){
+  const form = document.getElementById('lead');
+  const status = document.getElementById('status');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    let ok = true;
+    form.querySelectorAll('[required]').forEach(i => {
+      const bad = i.type === 'checkbox' ? !i.checked : !String(i.value).trim();
+      i.setAttribute('aria-invalid', bad ? 'true' : 'false');
+      if (bad) ok = false;
+    });
+    const wpp = form.querySelector('#i-wpp');
+    if (wpp.value && wpp.value.replace(/\D/g,'').length < 10) { wpp.setAttribute('aria-invalid','true'); ok = false; }
+    status.hidden = false;
+    if (!ok) { status.textContent = "Preencha todos os campos obrigatórios, com WhatsApp e DDD, e marque a autorização de contato."; return; }
+    const data = Object.fromEntries(new FormData(form).entries());
+    data.origem = "LP Infinity Games Con 2027"; data.data_envio = new Date().toISOString();
+    if (!LEAD_ENDPOINT) { status.textContent = "Formulário em configuração: os dados ainda não estão sendo enviados."; return; }
+    try {
+      const r = await fetch(LEAD_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
+      if (!r.ok) throw new Error();
+      form.reset();
+      status.textContent = "Recebemos seu contato. Você será avisado das novidades do Infinity Games Con.";
+    } catch (_) {
+      status.textContent = "Não foi possível enviar agora. Verifique sua conexão e tente de novo.";
+    }
+  });
+})();
+</script>
+</body></html>
