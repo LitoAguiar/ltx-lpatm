@@ -1,0 +1,639 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Futebol Experience Madrid 2027</title>
+<meta name="description" content="Futebol Experience Madrid 2027: uma semana de treinos ligados à metodologia do Atlético de Madrid, amistoso internacional e jogo no Metropolitano. Um programa LTX Global. 15 a 22 de maio de 2027.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400;500;600;700;800&display=swap">
+<style>
+/* Layout: cópia da LP "V2 — Matchday" — faixas full-bleed alternando noite (preto azulado) e azul Atlético, ouro como único acento; conteúdo em coluna única no celular, duas colunas no desktop. */
+:root{
+  --night:#0a0c12;
+  --night-2:#0d1018;
+  --navy:#0f1f42;
+  --navy-2:#162a55;
+  --card:#1a2b56;
+  --gold:#d1b154;
+  --gold-deep:#b8963a;
+  --olive:#6b6440;
+  --ink:#f5f3ee;
+  --muted:#b9bfcc;
+  --dim:#8a92a6;
+  --line:rgba(209,177,84,.55);
+  --hair:rgba(255,255,255,.14);
+  --paper:#ffffff;
+  --paper-ink:#1b2440;
+  --field:#eef1f6;
+  --ltx:#8cd43a;
+  --display:"Anton","Impact","Arial Narrow",sans-serif;
+  --body:"Montserrat","Helvetica Neue",Arial,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--night);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(28px,env(safe-area-inset-left,0px));padding-right:max(28px,env(safe-area-inset-right,0px))}
+@media (max-width:480px){.wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}}
+section{position:relative}
+.band{padding-block:88px}
+h1,h2,h3,.disp{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.005em;line-height:.98;text-wrap:balance;margin:0}
+h2{font-size:clamp(34px,5.4vw,56px)}
+.gold{color:var(--gold)}
+p{margin:0}
+.lead{font-size:clamp(17px,1.9vw,20px);font-weight:300;color:#d9dce4;max-width:62ch}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.small{font-size:14px;color:var(--dim)}
+.stack{display:flex;flex-direction:column;gap:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:64px;padding:0 30px;border-radius:6px;font-family:var(--body);font-weight:700;font-size:15px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:2px solid transparent;transition:transform .15s ease,background .15s ease,border-color .15s ease;text-align:center}
+.btn:hover{transform:translateY(-1px)}
+.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.btn-gold{background:var(--gold);color:#16120a}
+.btn-gold:hover{background:#dcbf66}
+.btn-ghost{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.btn-dark{border-color:#16120a;color:#16120a;background:transparent}
+.btns{display:flex;flex-wrap:wrap;gap:18px}
+.photo{border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--navy)}
+.photo img{width:100%;height:100%;object-fit:cover}
+
+/* LTX GLOBAL */
+.ltx{background:#000;border-bottom:1px solid rgba(140,212,58,.35)}
+.ltx .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.ltx-brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.ltx-brand span{font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#a9b0a0}
+.ltx-brand img{height:34px;width:auto}
+.ltx-tag{font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--ltx)}
+@media (max-width:560px){.ltx-tag{display:none}}
+
+/* HERO */
+.hero{background:
+  radial-gradient(60% 55% at 92% 30%,rgba(209,177,84,.38),transparent 70%),
+  radial-gradient(70% 60% at 0% 75%,rgba(36,70,150,.55),transparent 70%),
+  linear-gradient(180deg,#121a30 0%,#0d1426 60%,#0a0f1d 100%);overflow:hidden}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:45%;background:repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 2px,transparent 2px 46px);mask-image:linear-gradient(transparent,#000 40%,transparent);pointer-events:none}
+.nav{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:28px 40px;padding-block:28px 10px;position:relative;z-index:2}
+.nav .fe img{height:48px;width:auto}
+.nav ul{display:flex;align-items:center;flex-wrap:wrap;gap:12px 34px;list-style:none;margin:0;padding:0}
+.nav ul a{font-size:15px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;text-decoration:none}
+.nav ul a:hover{color:var(--gold)}
+.nav .btn{min-height:70px;padding:0 30px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:end;padding-block:36px 0;position:relative;z-index:1}
+.hero-copy{display:flex;flex-direction:column;gap:26px;padding-bottom:72px;min-width:0}
+.marks{display:flex;align-items:center;gap:26px}
+.marks .f{height:100px;width:auto}
+.marks .r{height:80px;width:auto}
+.marks .a{height:108px;width:auto;filter:drop-shadow(0 6px 18px rgba(0,0,0,.4))}
+.hero h1{font-size:clamp(40px,6.2vw,74px)}
+.date{font-size:clamp(20px,2.4vw,26px);font-weight:300;letter-spacing:.06em;text-transform:uppercase}
+.date i{font-style:normal;color:var(--gold);margin:0 4px}
+.hero-art{align-self:end;background:linear-gradient(180deg,#0b1020,#0a0d18);max-height:860px;overflow:hidden}
+.hero-art img{width:100%;height:auto}
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:12px}
+  .hero-copy{padding-bottom:30px}
+  .hero-art{margin:0 22px}
+}
+
+/* NÚMEROS */
+.stats{background:var(--navy);border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:36px 20px;padding-block:44px}
+.stat{text-align:center}
+.stat b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(54px,6vw,72px);line-height:1;color:var(--gold);font-variant-numeric:tabular-nums}
+.stat span{display:block;margin-top:10px;font-size:15px;font-weight:600;letter-spacing:.2em;text-transform:uppercase}
+@media (max-width:720px){.stats .wrap{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:420px){.stats .wrap{grid-template-columns:repeat(2,1fr)}}
+
+/* CARTÃO DE EMBARQUE */
+.pass-sec{background:radial-gradient(80% 60% at 50% 45%,#141c33,var(--night) 75%)}
+.pass{max-width:900px;margin:0 auto;border:2px solid #3555a8;border-radius:24px;background:linear-gradient(160deg,#1a2c5c,#14244a 60%,#1b2f61);padding:40px 34px 32px;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.route{display:grid;grid-template-columns:auto 1fr auto;align-items:end;gap:20px}
+.route small{display:block;font-size:14px;font-weight:600;letter-spacing:.22em;color:#9fb3e8}
+.route .city{display:flex;align-items:center;gap:12px;font-size:24px;font-weight:400;margin-top:6px}
+.flag{width:38px;height:26px;border-radius:4px;flex:none;overflow:hidden}
+.route .code{font-family:var(--body);font-weight:800;font-size:clamp(52px,8vw,72px);line-height:1.05;letter-spacing:.01em}
+.route .to{text-align:left}
+.route .to .code{color:var(--gold)}
+.arrow{align-self:center;color:var(--gold);justify-self:center;width:min(120px,100%)}
+.dash{border:0;border-top:2px dashed rgba(255,255,255,.28);margin:30px 0 34px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:34px 30px}
+.fact{display:flex;align-items:center;gap:14px;min-width:0}
+.pill{flex:none;border:2px solid var(--ink);border-radius:999px;padding:6px 16px;font-size:15px;font-weight:600}
+.pill.g{border-color:var(--gold);color:var(--gold)}
+.fact hr{flex:0 0 22px;border:0;border-top:1px solid rgba(255,255,255,.4);margin:0}
+.fact .v{font-family:var(--display);font-size:clamp(26px,3.2vw,34px);line-height:1.02;text-transform:uppercase;min-width:0}
+.fact .v.g{color:var(--gold)}
+.pass .small{margin-top:30px;color:#c4cbdc;font-size:15px}
+@media (max-width:640px){.facts{grid-template-columns:1fr}.pass{padding:30px 22px 26px}}
+
+/* MUITO MAIS */
+.more{background:linear-gradient(180deg,var(--night) 0%,#0b0f1b 100%)}
+.more::before{content:"";position:absolute;left:0;top:30%;width:40%;height:60%;background:radial-gradient(closest-side,rgba(36,70,150,.35),transparent);pointer-events:none}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.more-grid .stack{min-width:0}
+@media (max-width:900px){.more-grid{grid-template-columns:1fr}}
+
+/* VIVA O FUTEBOL */
+.viva{background:radial-gradient(70% 45% at 50% 0%,#1e3a7a 0%,#13275a 45%,var(--navy) 80%)}
+.pillars{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-top:56px}
+.pillar{padding:40px 36px 44px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#101f44;display:flex;flex-direction:column;gap:14px}
+.pillar:nth-child(2n){border-right:0}
+.pillar:nth-last-child(-n+2){border-bottom:0}
+.pillar h3{font-size:clamp(30px,3.4vw,38px)}
+.pillar p{color:#c9cfdb;font-size:17px;max-width:32ch}
+.pillar.fill{background:var(--olive)}
+@media (max-width:560px){.pillar{padding:30px 22px 34px}}
+
+/* OITO DIAS */
+.days{background:var(--night)}
+.exp{display:grid;grid-template-columns:1fr 1fr;gap:56px 26px;margin-top:56px}
+.exp .wide{grid-column:1/-1}
+.item{display:flex;flex-direction:column;gap:12px;min-width:0}
+.item .photo{aspect-ratio:746/466;margin-bottom:14px}
+.item.tall .photo{aspect-ratio:360/449}
+.item .num{font-size:14px;font-weight:600;letter-spacing:.22em;color:var(--gold)}
+.item h3{font-size:clamp(28px,3.2vw,38px)}
+.item p{color:var(--muted);font-size:17px}
+@media (max-width:560px){.exp{gap:44px 14px}.item.tall h3{font-size:24px}.item.tall p{font-size:15px}}
+
+/* ROTEIRO */
+.agenda{background:linear-gradient(90deg,var(--night) 0%,var(--night) 70%,#2a2412 100%)}
+.agenda::before{content:"";position:absolute;left:0;bottom:0;width:22%;height:40%;background:radial-gradient(closest-side at 0 100%,rgba(36,70,150,.45),transparent);pointer-events:none}
+.match{max-width:560px;border:1px solid #3555a8;border-radius:22px;overflow:hidden;background:#0f1f44;margin-top:40px}
+.match .top{position:relative;height:310px;background:#13275a}
+.match .top img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(.75) contrast(1.1);mix-blend-mode:luminosity;opacity:.9}
+.match .top::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(32,64,150,.55),rgba(18,38,92,.8))}
+.match .dt{position:absolute;right:30px;top:24px;z-index:1;text-align:center;font-weight:300;font-size:50px;line-height:1.05;letter-spacing:.02em}
+.match .dt hr{border:0;border-top:2px solid var(--ink);margin:4px 0}
+.match .bot{padding:32px 32px 40px;display:flex;flex-direction:column;gap:14px}
+.match .bot small{font-size:15px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#9fb3e8}
+.match .bot .vs{font-family:var(--display);font-size:clamp(46px,6vw,62px);line-height:.96;color:var(--gold);text-transform:uppercase}
+.match .bot .vs em{font-family:var(--body);font-style:normal;font-weight:300;color:var(--ink);font-size:.82em;margin-left:12px}
+.match .bot p{color:#c4cbdc;font-size:16px}
+.timeline{list-style:none;margin:56px 0 0;padding:0;border-top:1px solid var(--hair)}
+.timeline li{display:grid;grid-template-columns:90px 1fr;gap:24px;padding:34px 0;border-bottom:1px solid var(--hair)}
+.dayc{text-align:left}
+.dayc small{display:block;font-size:15px;font-weight:600;letter-spacing:.2em;color:#c4cbdc}
+.dayc b{display:block;font-family:var(--display);font-weight:400;font-size:52px;line-height:1;color:var(--gold);font-variant-numeric:tabular-nums}
+.dayc span{display:block;font-size:15px;font-weight:600;letter-spacing:.2em;color:#c4cbdc}
+.tl{display:flex;flex-direction:column;align-items:flex-start;gap:8px;min-width:0}
+.tl h3{font-size:clamp(24px,2.8vw,30px)}
+.tl p{color:var(--dim);font-size:16px}
+.tag{margin-top:14px;border:1.5px solid rgba(255,255,255,.55);border-radius:999px;padding:8px 18px;font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase}
+.tag.g{border-color:var(--gold);color:var(--gold)}
+
+/* BENEFÍCIOS */
+.gains{background:var(--night)}
+.cards5{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:48px}
+.gcard{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:32px 28px;display:flex;flex-direction:column;gap:14px}
+.gcard svg{width:28px;height:28px;color:var(--gold)}
+.gcard h3{font-family:var(--body);font-weight:700;font-size:20px;letter-spacing:.04em;line-height:1.25}
+.gcard p{color:var(--muted);font-size:16px}
+@media (min-width:1000px){.cards5{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:520px){.cards5{grid-template-columns:1fr}}
+
+/* PAIS */
+.parents{background:linear-gradient(180deg,#14295a 0%,var(--navy) 30%,#0e1d3f 100%)}
+.parents-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.parents-grid .photo{aspect-ratio:744/928}
+.chips{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.chip{display:flex;align-items:center;gap:14px;border:1px solid rgba(255,255,255,.35);border-radius:12px;padding:20px 22px;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.chip svg{width:22px;height:22px;flex:none}
+@media (max-width:900px){.parents-grid{grid-template-columns:1fr}}
+@media (max-width:480px){.chips{grid-template-columns:1fr}}
+
+/* HORIZONTES */
+.horizon{background:linear-gradient(180deg,var(--night) 0%,#0b1226 100%)}
+.horizon .photo{aspect-ratio:744/557;margin-top:56px;box-shadow:0 30px 70px rgba(0,0,0,.5)}
+
+/* ESCOLINHAS */
+.schools{background:var(--gold);color:#16120a}
+.schools .eyebrow{color:#16120a}
+.schools h2{font-size:clamp(30px,4.2vw,44px)}
+.schools p{font-size:18px;max-width:68ch}
+
+/* FAQ */
+.faq{background:var(--night);border-top:4px solid var(--gold)}
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.qa{display:flex;flex-direction:column;gap:14px}
+details{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:10px}
+details[open]{border-color:rgba(255,255,255,.45)}
+summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 26px;font-weight:700;font-size:18px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";width:9px;height:9px;border-right:2px solid var(--dim);border-bottom:2px solid var(--dim);transform:rotate(45deg) translateY(-3px);transition:transform .2s;flex:none}
+details[open] summary::after{transform:rotate(-135deg) translateY(-2px)}
+details p{padding:0 26px 22px;color:#d4d8e2;font-size:16px}
+@media (max-width:900px){.faq-grid{grid-template-columns:1fr}}
+
+/* CTA */
+.cta{background:#0a0b10;overflow:hidden;text-align:center}
+.cta .bg{position:absolute;inset:0}
+.cta .bg img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(.35) contrast(1.2)}
+.cta .bg::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(118deg,rgba(150,120,45,.85) 0%,rgba(120,96,38,.55) 30%,transparent 30.2%),
+  radial-gradient(60% 80% at 50% 50%,transparent,rgba(8,9,13,.85))}
+.cta .wrap{position:relative;display:flex;flex-direction:column;align-items:center;gap:26px;padding-block:110px}
+.cta h2{font-size:clamp(42px,7vw,86px)}
+.cta p.lead{margin:0 auto;color:#e8e6df;text-align:center}
+.cta .small{color:#b3b5bb}
+
+/* CONTATO */
+.contact{background:
+  radial-gradient(50% 60% at 100% 10%,rgba(209,177,84,.18),transparent 70%),
+  radial-gradient(40% 50% at 0% 100%,rgba(36,70,150,.4),transparent 70%),var(--night)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:start}
+.contact h2{font-size:clamp(42px,6vw,68px)}
+.form{background:var(--paper);color:var(--paper-ink);border-radius:18px;padding:34px 32px;display:flex;flex-direction:column;gap:18px;box-shadow:0 30px 80px rgba(0,0,0,.4)}
+.form h3{font-family:var(--body);text-transform:none;font-weight:700;font-size:30px;letter-spacing:0;line-height:1.15}
+.form .hint{color:#6c7489;font-size:15px;margin-top:-6px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:16px 16px}
+.field{display:flex;flex-direction:column;gap:8px;min-width:0}
+.field label{font-size:14px;font-weight:700}
+.field label em{font-style:normal;font-weight:400;color:#8a90a2}
+.field input{height:52px;border:1px solid #c9cfdc;border-radius:6px;background:var(--field);padding:0 14px;font:inherit;font-size:16px;color:var(--paper-ink);width:100%}
+.field input::placeholder{color:#9aa1b2}
+.field input[aria-invalid="true"]{border-color:#c0392b;background:#fdf0ee}
+.consent{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:#3b4560}
+.consent input{width:20px;height:20px;margin-top:2px;flex:none;accent-color:var(--gold-deep)}
+.consent a{color:var(--gold-deep)}
+.form .btn{min-height:52px;width:100%}
+.status{font-size:14px;border-radius:8px;padding:12px 14px;background:#f4efe0;color:#5a4a1a}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+@media (max-width:560px){.fields{grid-template-columns:1fr}.form{padding:28px 20px}}
+
+/* RODAPÉ */
+footer{background:#14171e;padding-block:56px 40px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:flex-start}
+.foot .fe img{height:44px;width:auto;margin-bottom:12px}
+.foot p{color:#b6bac4;font-size:15px}
+.foot ul{display:flex;flex-wrap:wrap;gap:12px 26px;list-style:none;margin:0;padding:0}
+.foot ul a{font-size:15px;font-weight:600;text-decoration:none}
+.foot ul a:hover{color:var(--gold)}
+.legal{margin-top:34px;padding-top:26px;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;gap:14px}
+.legal p{font-size:14px;color:#9aa0ad}
+.by{display:flex;align-items:center;gap:12px}
+.by img{height:26px;width:auto}
+</style>
+</head><body>
+
+<!-- LTX GLOBAL -->
+<div class="ltx">
+  <div class="wrap">
+    <a class="ltx-brand" href="#topo" aria-label="LTX Global">
+      <span>Um programa</span>
+      <img src="img/ltx-global.png" alt="LTX Global">
+    </a>
+    <div class="ltx-tag">Intercâmbio esportivo</div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="topo">
+  <div class="wrap">
+    <nav class="nav" aria-label="Principal">
+      <a class="fe" href="#topo"><img src="img/fe-logo-t.png" alt="Futebol Experience"></a>
+      <ul>
+        <li><a href="#roteiro">Roteiro</a></li>
+        <li><a href="#pais">Para os pais</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a class="btn btn-gold" href="#contato">Quero conhecer</a></li>
+      </ul>
+    </nav>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="marks" aria-hidden="true">
+          <img class="f" src="img/fe-mark.png" alt="">
+          <img class="r" src="img/raio.png" alt="">
+          <img class="a" src="img/atletico.png" alt="">
+        </div>
+        <h1>O sonho de viver o futebol europeu <span class="gold">começa aqui.</span></h1>
+        <p class="date">Madrid 2027 <i>//</i> 15 a 22 de maio</p>
+        <p class="lead">Uma experiência internacional para jovens de 7 a 17 anos que sonham em ir além das quatro linhas. Treinamentos ligados à metodologia do Atlético de Madrid, visitas a estádios históricos e momentos inesquecíveis em Madrid.</p>
+        <div class="btns">
+          <a class="btn btn-gold" href="#contato">Quero conhecer a experiência</a>
+          <a class="btn btn-ghost" href="#roteiro">Ver o roteiro</a>
+        </div>
+        <p class="small">Passagem aérea não incluída.</p>
+      </div>
+      <div class="hero-art"><img src="img/hero-atleta.jpg" alt="Jovem atleta com o uniforme Futebol Experience segurando uma bola"></div>
+    </div>
+  </div>
+</section>
+
+<!-- NÚMEROS -->
+<section class="stats" aria-label="O programa em números">
+  <div class="wrap">
+    <div class="stat"><b>8</b><span>Dias em Madrid</span></div>
+    <div class="stat"><b>7-17</b><span>Anos</span></div>
+    <div class="stat"><b>2</b><span>Estádios históricos</span></div>
+    <div class="stat"><b>1</b><span>Amistoso internacional previsto</span></div>
+  </div>
+</section>
+
+<!-- CARTÃO DE EMBARQUE -->
+<section class="pass-sec band">
+  <div class="wrap">
+    <div class="pass">
+      <div class="route">
+        <div>
+          <small>DE</small>
+          <div class="city"><svg class="flag" viewBox="0 0 38 26" aria-hidden="true"><rect width="38" height="26" fill="#1f9d48"/><path d="M19 3 35 13 19 23 3 13Z" fill="#f7d417"/><circle cx="19" cy="13" r="5.6" fill="#1d3f8f"/></svg>Brasil</div>
+          <div class="code">BRA</div>
+        </div>
+        <svg class="arrow" viewBox="0 0 120 24" fill="none" aria-hidden="true"><path d="M0 12h116M104 2l12 10-12 10" stroke="currentColor" stroke-width="2"/></svg>
+        <div class="to">
+          <small>PARA</small>
+          <div class="city"><svg class="flag" viewBox="0 0 38 26" aria-hidden="true"><rect width="38" height="26" fill="#c8102e"/><rect y="6.5" width="38" height="13" fill="#f6c400"/></svg>Madrid</div>
+          <div class="code">MAD</div>
+        </div>
+      </div>
+      <hr class="dash">
+      <div class="facts">
+        <div class="fact"><span class="pill">Data</span><hr><span class="v">15-22 MAI<br>2027</span></div>
+        <div class="fact"><span class="pill">Destino</span><hr><span class="v">Futebol<br>Experience</span></div>
+        <div class="fact"><span class="pill">Idade</span><hr><span class="v">7 a 17 anos</span></div>
+        <div class="fact"><span class="pill g">Status</span><hr><span class="v g">Lista de interesse aberta</span></div>
+      </div>
+      <p class="small">Pacote terrestre. Passagem aérea internacional não incluída.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MUITO MAIS QUE FUTEBOL -->
+<section class="more band">
+  <div class="wrap more-grid">
+    <div class="stack">
+      <h2>Muito mais que futebol.<br>Uma experiência <span class="gold">para a vida.</span></h2>
+      <p class="lead">Existem experiências que vão muito além dos 90 minutos de uma partida. Imagine conhecer de perto a estrutura de um grande clube europeu, participar de treinamentos na Espanha, descobrir uma nova cultura e compartilhar cada momento com outros jovens que vivem a mesma paixão pelo futebol.</p>
+      <p class="small" style="font-size:17px;color:#9aa3b8">Uma imersão que conecta esporte, aprendizado, cultura e novas amizades.</p>
+      <div><a class="btn btn-gold" href="#roteiro">Conhecer a programação</a></div>
+    </div>
+    <div class="photo" style="aspect-ratio:744/556"><img src="img/mochila-estadio.jpg" alt="Jovens com mochilas Futebol Experience chegando ao estádio ao pôr do sol"></div>
+  </div>
+</section>
+
+<!-- VIVA O FUTEBOL -->
+<section class="viva band">
+  <div class="wrap">
+    <div class="stack">
+      <h2>Viva o futebol na casa do Atlético de Madrid.</h2>
+      <p class="lead">Uma experiência esportiva ligada à metodologia do Atlético de Madrid, com atividades práticas, contato com a cultura do futebol espanhol e a possibilidade de ampliar a visão sobre o esporte.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar"><h3>Treinamentos</h3><p>Sessões de treinamento ligadas à metodologia do clube.</p></div>
+      <div class="pillar"><h3>Amistoso</h3><p>Um amistoso internacional previsto na programação.</p></div>
+      <div class="pillar"><h3>Cultura do futebol</h3><p>Visitas esportivas e contato com o futebol espanhol.</p></div>
+      <div class="pillar fill" aria-hidden="true"></div>
+    </div>
+    <div style="margin-top:56px"><a class="btn btn-gold" href="#contato">Quero saber como participar</a></div>
+  </div>
+</section>
+
+<!-- OITO DIAS -->
+<section class="days band">
+  <div class="wrap">
+    <h2>Oito dias. <span class="gold">Uma experiência inesquecível.</span></h2>
+    <div class="exp">
+      <article class="item wide">
+        <div class="photo"><img src="img/treino.jpg" alt="Jovens em treino de condução de bola com cones" loading="lazy"></div>
+        <span class="num">01</span><h3>Treine na Espanha</h3><p>Sessões de treinamento e novas formas de aprender futebol.</p>
+      </article>
+      <article class="item wide">
+        <div class="photo"><img src="img/amistoso.jpg" alt="Jovens disputando um amistoso em estádio com torcida" loading="lazy"></div>
+        <span class="num">02</span><h3>Viva um amistoso internacional</h3><p>Uma experiência de jogo além do resultado.</p>
+      </article>
+      <article class="item tall">
+        <div class="photo"><img src="img/metropolitano.jpg" alt="Estádio Metropolitano lotado em dia de jogo" loading="lazy"></div>
+        <span class="num">03</span><h3>Conheça o Metropolitano</h3><p>Visite o estádio do Atlético de Madrid.</p>
+      </article>
+      <article class="item tall">
+        <div class="photo"><img src="img/bernabeu.jpg" alt="Arquibancadas e gramado do Santiago Bernabéu" loading="lazy"></div>
+        <span class="num">04</span><h3>Explore o Santiago Bernabéu</h3><p>Um dos estádios mais emblemáticos do futebol.</p>
+      </article>
+      <article class="item tall">
+        <div class="photo"><img src="img/madrid.jpg" alt="Catedral de Almudena, em Madrid, ao entardecer" loading="lazy"></div>
+        <span class="num">05</span><h3>Descubra Madrid</h3><p>Pontos turísticos e programação cultural.</p>
+      </article>
+    </div>
+    <div style="margin-top:56px"><a class="btn btn-gold" href="#contato">Receber o roteiro completo</a></div>
+  </div>
+</section>
+
+<!-- ROTEIRO -->
+<section class="agenda band" id="roteiro">
+  <div class="wrap">
+    <div class="stack" style="gap:20px">
+      <h2>Uma semana para viver o futebol <span class="gold">intensamente.</span></h2>
+      <p class="lead" style="font-size:18px">Programação preliminar sujeita a confirmação e ajustes operacionais.</p>
+    </div>
+    <div class="match">
+      <div class="top">
+        <img src="img/torcida.jpg" alt="" aria-hidden="true">
+        <div class="dt">MAI<hr>2027</div>
+      </div>
+      <div class="bot">
+        <small>Experiência prevista</small>
+        <div class="vs">Atlético<em>no</em><br>Metropolitano</div>
+        <p>Condicionada ao calendário e aos ingressos.</p>
+      </div>
+    </div>
+    <div style="margin-top:32px"><a class="btn btn-gold" href="#contato">Falar com um consultor</a></div>
+    <ol class="timeline">
+      <li><div class="dayc"><small>SÁB</small><b>15</b><span>MAI</span></div><div class="tl"><h3>Chegada a Madrid</h3><p>Recepção do grupo e acomodação.</p><span class="tag">Programa</span></div></li>
+      <li><div class="dayc"><small>DOM</small><b>16</b><span>MAI</span></div><div class="tl"><h3>Jogo do Atlético de Madrid</h3><p>Experiência de jogo prevista, condicionada ao calendário e aos ingressos.</p><span class="tag g">Previsto</span></div></li>
+      <li><div class="dayc"><small>SEG</small><b>17</b><span>MAI</span></div><div class="tl"><h3>Treinamento + Santiago Bernabéu</h3><p>Sessão de treino e visita ao estádio.</p><span class="tag">Programa</span></div></li>
+      <li><div class="dayc"><small>TER</small><b>18</b><span>MAI</span></div><div class="tl"><h3>Treinamento + Metropolitano</h3><p>Sessão de treino e visita à casa do Atlético.</p><span class="tag">Programa</span></div></li>
+      <li><div class="dayc"><small>QUA</small><b>19</b><span>MAI</span></div><div class="tl"><h3>Treinamento + Parque Warner</h3><span class="tag">Programa</span></div></li>
+      <li><div class="dayc"><small>QUI</small><b>20</b><span>MAI</span></div><div class="tl"><h3>Treinamento + Passeio por Madrid</h3><span class="tag">Programa</span></div></li>
+      <li><div class="dayc"><small>SEX</small><b>21</b><span>MAI</span></div><div class="tl"><h3>Amistoso internacional</h3><p>Amistoso previsto.</p><span class="tag g">Previsto</span></div></li>
+      <li><div class="dayc"><small>SÁB</small><b>22</b><span>MAI</span></div><div class="tl"><h3>Retorno</h3><span class="tag">Programa</span></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- O QUE SEU FILHO LEVA -->
+<section class="gains band">
+  <div class="wrap">
+    <h2>O que seu filho leva dessa experiência vai muito além do futebol.</h2>
+    <div class="cards5">
+      <div class="gcard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg><h3>AUTONOMIA E RESPONSABILIDADE</h3><p>Vivências que incentivam independência e confiança.</p></div>
+      <div class="gcard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m12 7.5 4 2.9-1.5 4.6h-5L8 10.4z"/><path d="M12 3v4.5M16 10.4l4.3-1.4M14.5 15l2.6 3.7M9.5 15l-2.6 3.7M8 10.4 3.7 9"/></svg><h3>APRENDIZADO ESPORTIVO</h3><p>Contato com novas dinâmicas e metodologias.</p></div>
+      <div class="gcard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><h3>CULTURA INTERNACIONAL</h3><p>Conhecimento de novos costumes e perspectivas.</p></div>
+      <div class="gcard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5"/><path d="M15.5 4.7a3.5 3.5 0 0 1 0 6.6M18 14.8c2 .8 3.2 2.5 3.5 5.2"/></svg><h3>CONVIVÊNCIA</h3><p>Novas amizades e trabalho em grupo.</p></div>
+      <div class="gcard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/></svg><h3>MEMÓRIAS PARA A VIDA</h3><p>Uma jornada para compartilhar com a família.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PARA OS PAIS -->
+<section class="parents band" id="pais">
+  <div class="wrap parents-grid">
+    <div class="photo"><img src="img/equipe-atletico.jpg" alt="Equipe do programa na sede do Atlético de Madrid" loading="lazy"></div>
+    <div class="stack">
+      <h2>O sonho é deles. <span class="gold">A tranquilidade precisa ser sua.</span></h2>
+      <p class="lead">Uma experiência internacional com crianças e adolescentes exige planejamento, cuidado e responsabilidade. O Futebol Experience trabalha em conjunto com a Next Sport Travel, das orientações anteriores à viagem à execução das atividades em Madrid.</p>
+      <div class="chips">
+        <div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Organização</div>
+        <div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Documentação</div>
+        <div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.2 7.5 9.5 4.3-1.3 7.5-4.9 7.5-9.5V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg>Acompanhamento</div>
+        <div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19c0 1.5-1.5 2-4 2"/></svg>Suporte</div>
+      </div>
+      <p class="small" style="font-size:15px;color:#a9b3cc">As famílias terão acesso às informações sobre programação, documentação, serviços, acompanhamento e suporte antes da contratação.</p>
+      <div><a class="btn btn-gold" href="#faq">Tirar minhas dúvidas</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- HORIZONTES -->
+<section class="horizon band">
+  <div class="wrap">
+    <div class="stack">
+      <h2>Para quem acredita que o futebol pode abrir novos horizontes.</h2>
+      <p class="lead">Pensado para jovens de 7 a 17 anos apaixonados por futebol, que desejam conhecer o futebol europeu, participar de treinamentos internacionais, fazer novas amizades e viver uma jornada fora do comum.</p>
+      <div><a class="btn btn-gold" href="#contato">Quero conversar sobre meu filho</a></div>
+    </div>
+    <div class="photo"><img src="img/atletas-atletico.jpg" alt="Jovens atletas com o uniforme do Atlético de Madrid perfilados no estádio" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- ESCOLINHAS -->
+<section class="schools band" style="padding-block:64px">
+  <div class="wrap stack" style="gap:18px">
+    <span class="eyebrow">Escolinhas e clubes parceiros</span>
+    <h2>Sua escolinha também pode fazer parte dessa experiência.</h2>
+    <p>Parceiros poderão apresentar o programa às famílias, receber materiais de divulgação e contar com suporte comercial. Remuneração por indicação formalizada conforme contrato.</p>
+    <div style="margin-top:12px"><a class="btn btn-dark" href="#contato">Quero ser uma escolinha parceira</a></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq band" id="faq">
+  <div class="wrap faq-grid">
+    <div class="stack">
+      <h2>Tudo o que você precisa saber.</h2>
+      <div><a class="btn btn-ghost" href="#contato">Falar com a equipe</a></div>
+    </div>
+    <div class="qa" id="qa">
+      <details open><summary>Qual a idade?</summary><p>De 7 a 17 anos, conforme requisitos finais.</p></details>
+      <details><summary>Pode viajar sem os pais?</summary><p>Condições de supervisão e autorizações serão informadas antes da contratação.</p></details>
+      <details><summary>A passagem aérea está incluída?</summary><p>Não. A passagem aérea internacional não está incluída no investimento.</p></details>
+      <details><summary>Como pagar?</summary><p>As condições serão apresentadas pela equipe.</p></details>
+      <details><summary>Onde ficam hospedados?</summary><p>As informações estarão na proposta definitiva.</p></details>
+      <details><summary>Precisa ser profissional?</summary><p>Não. O programa não é uma seletiva.</p></details>
+      <details><summary>Garante contratação pelo Atlético?</summary><p>Não. O programa não oferece promessa de contratação.</p></details>
+      <details><summary>Quanto custa?</summary><p>Valores e condições são apresentados pela nossa equipe. Preencha o formulário de interesse e entraremos em contato.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="bg" aria-hidden="true"><img src="img/torcida.jpg" alt=""></div>
+  <div class="wrap">
+    <span class="eyebrow">Madrid // 15 a 22 de maio de 2027</span>
+    <h2>Seu sonho <span class="gold">entra em campo.</span></h2>
+    <p class="lead">Os grandes sonhos começam com uma oportunidade. Imagine viver essa paixão em outro país, conhecer grandes estádios, participar de treinamentos e compartilhar uma experiência inesquecível. Madrid 2027 pode ser o próximo capítulo da sua história.</p>
+    <a class="btn btn-gold" href="#contato">Quero fazer parte da primeira turma</a>
+    <p class="small">Nossa equipe apresenta todos os detalhes antes da contratação.</p>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="contact band" id="contato">
+  <div class="wrap contact-grid">
+    <div class="stack" style="gap:24px">
+      <span class="eyebrow">Fale com a equipe</span>
+      <h2>Dê o primeiro passo. <span class="gold">A gente conversa.</span></h2>
+      <p class="lead" style="font-size:18px">Deixe seu interesse e nossa equipe entra em contato para apresentar o programa, os valores, as condições e tirar todas as suas dúvidas.</p>
+      <p class="small" style="font-size:16px">Prefere conversar agora?</p>
+      <div><a class="btn btn-ghost" id="wa" href="#contato">Falar no WhatsApp</a></div>
+    </div>
+    <form class="form" id="lead" novalidate>
+      <h3>Quero falar com a equipe</h3>
+      <p class="hint">4 campos obrigatórios. Leva menos de um minuto.</p>
+      <div class="fields">
+        <div class="field"><label for="f-nome">Nome do responsável</label><input id="f-nome" name="responsavel" autocomplete="name" required></div>
+        <div class="field"><label for="f-wpp">WhatsApp com DDD</label><input id="f-wpp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(11) 90000-0000" required></div>
+        <div class="field"><label for="f-idade">Idade do atleta</label><input id="f-idade" name="idade" type="number" inputmode="numeric" min="7" max="17" required></div>
+        <div class="field"><label for="f-cidade">Cidade/estado</label><input id="f-cidade" name="cidade" autocomplete="address-level2" required></div>
+        <div class="field"><label for="f-email">E-mail <em>(opcional)</em></label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+        <div class="field"><label for="f-atleta">Nome do atleta <em>(opcional)</em></label><input id="f-atleta" name="atleta"></div>
+        <div class="field"><label for="f-clube">Escolinha/clube <em>(opcional)</em></label><input id="f-clube" name="clube"></div>
+      </div>
+      <label class="consent" for="f-ok"><input id="f-ok" name="consentimento" type="checkbox" required><span>Autorizo o contato da equipe Futebol Experience por WhatsApp e e-mail. <a href="#contato">Política de privacidade</a>.</span></label>
+      <button class="btn btn-gold" type="submit">Quero falar com a equipe</button>
+      <p class="status" id="status" role="status" hidden></p>
+    </form>
+  </div>
+</section>
+
+<!-- RODAPÉ -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="fe" href="#topo"><img src="img/fe-logo-t.png" alt="Futebol Experience"></a>
+        <p>Seu sonho entra em campo. Experiências esportivas internacionais.</p>
+      </div>
+      <ul>
+        <li><a href="#contato">Contato</a></li>
+        <li><a href="#contato">Instagram</a></li>
+        <li><a href="#contato">Política de Privacidade</a></li>
+        <li><a href="#contato">Termos e Condições</a></li>
+      </ul>
+    </div>
+    <div class="legal">
+      <div class="by"><p>Futebol Experience é um programa</p><img src="img/ltx-global.png" alt="LTX Global"></div>
+      <p>Marca independente. Experiência organizada em parceria com Next Sport Travel; menções e ativos oficiais do Atlético de Madrid sujeitos às autorizações aplicáveis.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Configure antes de publicar no site: */
+const LEAD_ENDPOINT = "";    // URL do CRM/webhook que recebe o formulário (POST JSON)
+const WHATSAPP_NUMBER = "";  // ex.: "5548999999999"
+
+(function(){
+  const wa = document.getElementById('wa');
+  if (WHATSAPP_NUMBER) {
+    wa.href = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent("Olá! Quero saber mais sobre o Futebol Experience Madrid 2027.");
+    wa.target = "_blank"; wa.rel = "noopener";
+  }
+
+  // FAQ: abre um item por vez
+  const items = document.querySelectorAll('#qa details');
+  items.forEach(d => d.addEventListener('toggle', () => {
+    if (d.open) items.forEach(o => { if (o !== d) o.open = false; });
+  }));
+
+  const form = document.getElementById('lead');
+  const status = document.getElementById('status');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    let ok = true;
+    form.querySelectorAll('input[required]').forEach(i => {
+      const bad = i.type === 'checkbox' ? !i.checked : !i.value.trim();
+      i.setAttribute('aria-invalid', bad ? 'true' : 'false');
+      if (bad) ok = false;
+    });
+    const wpp = form.querySelector('#f-wpp');
+    if (wpp.value && wpp.value.replace(/\D/g,'').length < 10) { wpp.setAttribute('aria-invalid','true'); ok = false; }
+    status.hidden = false;
+    if (!ok) { status.textContent = "Preencha os 4 campos obrigatórios, com WhatsApp e DDD, e marque a autorização de contato."; return; }
+    const data = Object.fromEntries(new FormData(form).entries());
+    data.origem = "LP Madrid 2027"; data.data_envio = new Date().toISOString();
+    if (!LEAD_ENDPOINT) { status.textContent = "Formulário em configuração: os dados ainda não estão sendo enviados."; return; }
+    try {
+      const r = await fetch(LEAD_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
+      if (!r.ok) throw new Error();
+      form.reset();
+      status.textContent = "Recebemos seu interesse. Nossa equipe entra em contato pelo WhatsApp.";
+    } catch (_) {
+      status.textContent = "Não foi possível enviar agora. Verifique sua conexão e tente de novo.";
+    }
+  });
+})();
+</script>
+</body></html>
