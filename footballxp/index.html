@@ -85,12 +85,12 @@ p{margin:0}
 .marks{display:flex;align-items:center;gap:26px}
 .marks .f{height:118px;width:auto}
 .marks .r{height:80px;width:auto}
-.marks .a{height:108px;width:auto;filter:drop-shadow(0 6px 18px rgba(0,0,0,.4))}
+.marks .a{height:108px;width:auto;filter:drop-shadow(0 0 1.5px rgba(248,250,252,.9)) drop-shadow(0 0 18px rgba(36,84,180,.6))}
 .hero h1{font-size:clamp(40px,6.2vw,74px)}
 .date{font-size:clamp(20px,2.4vw,26px);font-weight:300;letter-spacing:.06em;text-transform:uppercase}
 .date i{font-style:normal;color:var(--gold);margin:0 4px}
-.hero-art{align-self:end;background:linear-gradient(180deg,#0b1020,#0a0d18);max-height:860px;overflow:hidden}
-.hero-art img{width:100%;height:auto}
+.hero-art{align-self:end;max-height:860px;overflow:hidden}
+.hero-art img{width:100%;height:auto;-webkit-mask-image:radial-gradient(ellipse 50% 52% at 50% 50%,#000 58%,transparent 100%);mask-image:radial-gradient(ellipse 50% 52% at 50% 50%,#000 58%,transparent 100%)}
 @media (max-width:900px){
   .hero-grid{grid-template-columns:1fr;gap:12px}
   .hero-copy{padding-bottom:30px}
@@ -337,7 +337,7 @@ footer{background:#14171e;padding-block:56px 40px}
         <div class="marks" aria-hidden="true">
           <img class="f" src="img/fx-escudo.png" alt="">
           <img class="r" src="img/raio.png" alt="">
-          <img class="a" src="img/atletico.png" alt="">
+          <img class="a" src="img/atletico.webp" alt="">
         </div>
         <h1>O sonho de viver o futebol europeu <span class="gold">começa aqui.</span></h1>
         <p class="date">Madrid 2027 <i>//</i> 15 a 22 de maio</p>
